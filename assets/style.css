@@ -1,0 +1,304 @@
+html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #fff;
+      color: #231a3d;
+    }
+
+    .btn-accent {
+      background: #c5d97d;
+      color: #231a3d;
+      transition: all .22s;
+      font-weight: 600;
+    }
+
+    .btn-accent:hover {
+      background: #d4e88c;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(197, 217, 125, .38);
+    }
+
+    .btn-primary {
+      background: #231a3d;
+      color: #fff;
+      transition: all .22s;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      background: #36365f;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(35, 26, 61, .22);
+    }
+
+    .btn-outline-light {
+      border: 1.5px solid rgba(255, 255, 255, .35);
+      color: rgba(255, 255, 255, .9);
+      transition: all .22s;
+    }
+
+    .btn-outline-light:hover {
+      background: rgba(255, 255, 255, .08);
+      border-color: #fff;
+    }
+
+    .btn-outline-dark {
+      border: 1.5px solid #231a3d;
+      color: #231a3d;
+      transition: all .22s;
+    }
+
+    .btn-outline-dark:hover {
+      background: #231a3d;
+      color: #fff;
+    }
+
+    .btn-teal {
+      background: #1e929b;
+      color: #fff;
+      transition: all .22s;
+      font-weight: 600;
+    }
+
+    .btn-teal:hover {
+      background: #1a7f87;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(30, 146, 155, .3);
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, .72);
+      font-size: .875rem;
+      transition: color .18s;
+    }
+
+    .nav-link:hover {
+      color: #c5d97d;
+    }
+
+    /* highlight */
+    .hl {
+      color: #c5d97d;
+    }
+
+    .hl-teal {
+      color: #1e929b;
+    }
+
+    /* sections */
+    .s-dark {
+      background: #231a3d;
+    }
+
+    .s-darker {
+      background: #1a1535;
+    }
+
+    /* cards */
+    .card {
+      background: #fff;
+      border: 1.5px solid #e8edf2;
+      border-radius: 1rem;
+      transition: box-shadow .25s, transform .25s;
+    }
+
+    .card:hover {
+      box-shadow: 0 10px 40px rgba(35, 26, 61, .1);
+      transform: translateY(-3px);
+    }
+
+    .card-dark {
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 1rem;
+      transition: background .22s, border-color .22s;
+    }
+
+    .card-dark:hover {
+      background: rgba(255, 255, 255, .08);
+      border-color: rgba(197, 217, 125, .2);
+    }
+
+    /* module pill */
+    .module-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .6rem;
+      padding: .4rem 1.25rem;
+      border-radius: 999px;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      min-width: 140px;
+    }
+
+    .mp-inscriptions {
+      background: rgba(197, 217, 125, .15);
+      border: 1px solid rgba(197, 217, 125, .35);
+      color: #c4d87d;
+    }
+    .mp-benevoles {
+      background: rgba(111, 111, 173, .12);
+      border: 1px solid rgba(111, 111, 173, .3);
+      color: #6f6fad;
+    }
+    .mp-communication {
+      background: rgba(30, 146, 155, .12);
+      border: 1px solid rgba(30, 146, 155, .3);
+      color: #1e929b;
+    }
+    .mp-administratif {
+      background: rgba(48, 183, 192, .12);
+      border: 1px solid rgba(48, 183, 192, .3);
+      color: #30b7c0;
+    }
+
+    .mp-green {
+      background: rgba(197, 217, 125, .15);
+      border: 1px solid rgba(197, 217, 125, .35);
+      color: #c5d97d;
+    }
+
+    .mp-teal {
+      background: rgba(30, 146, 155, .12);
+      border: 1px solid rgba(30, 146, 155, .3);
+      color: #1e929b;
+    }
+
+    .mp-green-light {
+      background: rgba(197, 217, 125, .18);
+      border: 1px solid rgba(197, 217, 125, .45);
+      color: #36365f;
+    }
+
+    .mp-teal-light {
+      background: rgba(30, 146, 155, .1);
+      border: 1px solid rgba(30, 146, 155, .2);
+      color: #1e929b;
+    }
+
+    /* feature icon box */
+    .icon-box {
+      width: 3rem;
+      height: 3rem;
+      border-radius: .875rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* checkmark list */
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: .625rem;
+      font-size: .875rem;
+      color: #36365f;
+      margin-bottom: .625rem;
+    }
+
+    /* reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* grad */
+    .grad-text {
+      background: linear-gradient(135deg, #1e929b, #c5d97d);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid #e8edf2;
+    }
+
+    .faq-answer {
+      display: none;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-icon {
+      transition: transform .22s;
+    }
+
+    /* fields */
+    .field {
+      background: #fff;
+      border: 1.5px solid #dde3ea;
+      color: #231a3d;
+      border-radius: .75rem;
+      padding: .875rem 1rem;
+      width: 100%;
+      font-size: .875rem;
+      transition: border-color .2s, box-shadow .2s;
+      font-family: inherit;
+    }
+
+    .field:focus {
+      outline: none;
+      border-color: #1e929b;
+      box-shadow: 0 0 0 3px rgba(30, 146, 155, .12);
+    }
+
+    .field::placeholder {
+      color: #9aa3ae;
+    }
+
+    /* tab active */
+    .tab-btn {
+      padding: .5rem 1.25rem;
+      border-radius: .625rem;
+      font-size: .82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .2s;
+      color: #6f6fad;
+      background: transparent;
+      border: none;
+    }
+
+    .tab-btn.active {
+      background: #231a3d;
+      color: #fff;
+    }
+
+    .tab-pane {
+      display: none;
+    }
+
+    .tab-pane.active {
+      display: block;
+    }
+
+    /* divider */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(197, 217, 125, .3), transparent);
+    }
+
+    .divider-dark {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .1), transparent);
+    }
