@@ -1,60 +1,63 @@
-lucide.createIcons();
+document.addEventListener('DOMContentLoaded', () => {
+  lucide.createIcons();
+});
 
-    document.getElementById('menu-btn').addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
-    document.querySelectorAll('a[href^="#"]').forEach(l => {
-      l.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden'));
-    });
+document.getElementById('menu-btn').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+});
 
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
-    }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(l => {
+    l.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden'));
+});
 
-    window.addEventListener('scroll', () => {
-      document.getElementById('nav').style.boxShadow = window.scrollY > 10 ? '0 2px 20px rgba(0,0,0,.35)' : 'none';
-    });
+const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+}, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-    function toggleFaq(el) {
-      const wasOpen = el.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-      if (!wasOpen) el.classList.add('open');
-      lucide.createIcons();
-    }
+window.addEventListener('scroll', () => {
+    document.getElementById('nav').style.boxShadow = window.scrollY > 10 ? '0 2px 20px rgba(0,0,0,.35)' : 'none';
+});
 
-    document.getElementById('signup-form').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const prenom = document.getElementById('prenom').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const msg = document.getElementById('form-msg');
-      if (!prenom || !email) {
+function toggleFaq(el) {
+    const wasOpen = el.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) el.classList.add('open');
+    lucide.createIcons();
+}
+
+document.getElementById('signup-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const prenom = document.getElementById('prenom').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const msg = document.getElementById('form-msg');
+    if (!prenom || !email) {
         msg.textContent = 'Veuillez renseigner votre prénom et votre email.';
         msg.className = 'text-sm text-center'; msg.style.color = '#f87171'; msg.classList.remove('hidden'); return;
-      }
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         msg.textContent = 'Veuillez entrer une adresse email valide.';
         msg.className = 'text-sm text-center'; msg.style.color = '#f87171'; msg.classList.remove('hidden'); return;
-      }
-      document.getElementById('btn-text').textContent = 'Compte créé !';
-      document.getElementById('btn-icon').classList.add('hidden');
-      document.getElementById('btn-check').classList.remove('hidden');
-      msg.textContent = 'Bienvenue ' + prenom + ' ! Vérifiez votre boîte mail pour activer votre compte.';
-      msg.style.color = '#c5d97d'; msg.className = 'text-sm text-center'; msg.classList.remove('hidden');
-      this.querySelectorAll('input,select,button').forEach(el => el.disabled = true);
-      lucide.createIcons();
-    });
+    }
+    document.getElementById('btn-text').textContent = 'Compte créé !';
+    document.getElementById('btn-icon').classList.add('hidden');
+    document.getElementById('btn-check').classList.remove('hidden');
+    msg.textContent = 'Bienvenue ' + prenom + ' ! Vérifiez votre boîte mail pour activer votre compte.';
+    msg.style.color = '#c5d97d'; msg.className = 'text-sm text-center'; msg.classList.remove('hidden');
+    this.querySelectorAll('input,select,button').forEach(el => el.disabled = true);
+    lucide.createIcons();
+});
 
-    // Carousel Drag-to-Scroll Logic
-    const carousel = document.getElementById('race-carousel');
-    if (carousel) {
-      let isDown = false;
-      let startX;
-      let scrollLeft;
-      let velocity = 0;
-      let lastX;
+// Carousel Drag-to-Scroll Logic
+const carousel = document.getElementById('race-carousel');
+if (carousel) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    let velocity = 0;
+    let lastX;
 
-      carousel.addEventListener('mousedown', (e) => {
+    carousel.addEventListener('mousedown', (e) => {
         isDown = true;
         carousel.style.scrollBehavior = 'auto'; // Disable smooth scroll while dragging
         carousel.style.scrollSnapType = 'none'; // Disable snap while dragging
@@ -62,67 +65,67 @@ lucide.createIcons();
         startX = e.pageX - carousel.offsetLeft;
         scrollLeft = carousel.scrollLeft;
         lastX = e.pageX;
-      });
+    });
 
-      carousel.addEventListener('mouseleave', () => {
+    carousel.addEventListener('mouseleave', () => {
         if (!isDown) return;
         isDown = false;
         carousel.style.scrollSnapType = 'x mandatory';
         carousel.style.scrollBehavior = 'smooth';
-      });
+    });
 
-      carousel.addEventListener('mouseup', () => {
+    carousel.addEventListener('mouseup', () => {
         isDown = false;
         carousel.style.scrollSnapType = 'x mandatory';
         carousel.style.scrollBehavior = 'smooth';
-      });
+    });
 
-      carousel.addEventListener('mousemove', (e) => {
+    carousel.addEventListener('mousemove', (e) => {
         if (!isDown) return;
         e.preventDefault();
         const x = e.pageX - carousel.offsetLeft;
         const walk = (x - startX) * 1.5;
         carousel.scrollLeft = scrollLeft - walk;
-      });
-    }
+    });
+}
 
-    // Module Tab Switcher
-    window.showModule = function(modId) {
-      const colors = {
+// Module Tab Switcher
+window.showModule = function(modId) {
+    const colors = {
         inscriptions: '#c4d87d',
         benevoles: '#6f6fad',
         communication: '#1e929b',
         administratif: '#30b7c0'
-      };
-      
-      // Update Buttons
-      document.querySelectorAll('.module-tab').forEach(btn => {
+    };
+    
+    // Update Buttons
+    document.querySelectorAll('.module-tab').forEach(btn => {
         btn.classList.remove('active');
         btn.style.borderColor = '';
         btn.style.backgroundColor = '';
         const icon = btn.querySelector('i[data-lucide]');
         if (icon) icon.style.color = ''; // Reset to default CSS color
-      });
+    });
 
-      const activeBtn = document.getElementById('btn-' + modId);
-      const activeColor = colors[modId];
-      
-      activeBtn.classList.add('active');
-      activeBtn.classList.remove('border-gray-100', 'bg-white');
-      activeBtn.style.borderColor = activeColor;
-      activeBtn.style.backgroundColor = activeColor + '10'; // 10% opacity bg
-      const activeIcon = activeBtn.querySelector('i[data-lucide]');
-      if (activeIcon) activeIcon.style.color = activeColor;
+    const activeBtn = document.getElementById('btn-' + modId);
+    const activeColor = colors[modId];
+    
+    activeBtn.classList.add('active');
+    activeBtn.classList.remove('border-gray-100', 'bg-white');
+    activeBtn.style.borderColor = activeColor;
+    activeBtn.style.backgroundColor = activeColor + '10'; // 10% opacity bg
+    const activeIcon = activeBtn.querySelector('i[data-lucide]');
+    if (activeIcon) activeIcon.style.color = activeColor;
 
-      // Update Content
-      document.querySelectorAll('.module-content').forEach(content => {
+    // Update Content
+    document.querySelectorAll('.module-content').forEach(content => {
         content.classList.add('hidden');
         content.classList.remove('active');
-      });
-      const activeContent = document.getElementById('mod-' + modId);
-      activeContent.classList.remove('hidden');
-      activeContent.classList.add('active', 'animate-in', 'fade-in', 'slide-in-from-bottom-4', 'duration-500');
-      
-      // Refresh Icons
-      lucide.createIcons();
-    };
+    });
+    const activeContent = document.getElementById('mod-' + modId);
+    activeContent.classList.remove('hidden');
+    activeContent.classList.add('active', 'animate-in', 'fade-in', 'slide-in-from-bottom-4', 'duration-500');
+    
+    // Refresh Icons
+    lucide.createIcons();
+};
