@@ -16,8 +16,8 @@ tailwind.config = {
         administratif: "#30b7c0",
       },
       fontFamily: {
-        display: ["'Barlow Condensed'", "sans-serif"],
-        body: ["'DM Sans'", "sans-serif"],
+        display: ["'Inter'", "sans-serif"],
+        body: ["'Inter'", "sans-serif"],
       },
       keyframes: {
         fadeUp: {
