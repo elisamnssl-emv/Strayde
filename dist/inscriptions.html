@@ -2,314 +2,282 @@
 <html lang='fr'>
 <head>
 <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Gestion des Inscriptions | Strayde</title>
-  <meta name="description" content="Ouvrez et gérez vos inscriptions simplement, sans multiplier les outils." />
-  <meta property="og:title" content="Gestion des Inscriptions | Strayde" />
-  <meta property="og:description" content="Ouvrez et gérez vos inscriptions simplement, sans multiplier les outils." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://strayde.com" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: "#231a3d", secondary: "#1e929b", accent: "#c4d87d",
-            navy: "#36365f", teal: "#30b7c0", muted: "#6f6fad",
-            sage: "#dff1bb", offwhite: "#f4fbe5",
-            inscriptions: "#c4d87d",
-            benevoles: "#6f6fad",
-            communication: "#1e929b",
-            administratif: "#30b7c0",
-          },
-          fontFamily: {
-            display: ["'Barlow Condensed'", "sans-serif"],
-            body: ["'DM Sans'", "sans-serif"],
-          },
-          keyframes: {
-            fadeUp: { "0%": { opacity: "0", transform: "translateY(28px)" }, "100%": { opacity: "1", transform: "translateY(0)" } },
-            floatY: { "0%,100%": { transform: "translateY(0)" }, "50%": { transform: "translateY(-8px)" } },
-            blink: { "0%,100%": { opacity: "1" }, "50%": { opacity: "0.3" } },
-          },
-          animation: {
-            "fade-up": "fadeUp .65s ease both",
-            "fade-up-2": "fadeUp .65s .12s ease both",
-            "fade-up-3": "fadeUp .65s .25s ease both",
-            floatY: "floatY 4s ease-in-out infinite",
-            blink: "blink 2s ease-in-out infinite",
-          },
-        },
-      },
-    };
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&family=DM+Sans:wght@300;400;500;600&display=swap"
-    rel="stylesheet" />
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="assets/style.css" />
+ <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ <title>Gestion des inscriptions | Strayde</title>
+ <meta name="description" content="Ouvrez et gérez vos inscriptions simplement, sans multiplier les outils." />
+ <meta property="og:title" content="Gestion des inscriptions | Strayde" />
+ <meta property="og:description" content="Ouvrez et gérez vos inscriptions simplement, sans multiplier les outils." />
+ <meta property="og:type" content="website" />
+ <meta property="og:url" content="https://strayde.com" />
+ <script src="https://cdn.tailwindcss.com"></script>
+ <script src="assets/tailwind-config.js"></script>
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link
+ href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&family=DM+Sans:wght@300;400;500;600&display=swap"
+ rel="stylesheet" />
+ <script src="https://unpkg.com/lucide@latest"></script>
+ <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body class='font-body antialiased'>
 <header id="nav" class="fixed top-0 w-full z-50 s-dark header-glass">
-    <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between relative">
-      <a href="index.html"><img src="assets/img/logo-horizontal-blanc-vert.png" class="h-10 w-auto" alt="Strayde"></a>
-      <!-- Nav desktop -->
-      <nav class="hidden md:flex flex-1 items-center justify-between ml-8">
+ <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between relative">
+ <a href="index.html"><img width="748" height="208" src="assets/img/logo-horizontal-blanc-vert.png" class="h-10 w-auto" alt="Strayde"></a>
+ <!-- Nav desktop -->
+ <nav class="hidden md:flex flex-1 items-center justify-between ml-8">
 
-        <!-- Centre : 3 menus côte à côte -->
-        <div class="flex items-center gap-8 mx-auto">
+ <!-- Centre : 3 menus côte à côte -->
+ <div class="flex items-center gap-8 mx-auto">
 
-          <!-- La solution -->
-          <div class="relative group">
-            <button class="nav-link flex items-center gap-1.5 py-1">
-              La solution <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-3.5 h-3.5 opacity-60 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
-            </button>
-            <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-52 rounded-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-card">
-              <a href="plateforme-360.html" class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
-                <div class="w-7 flex-shrink-0 flex items-center justify-start">
-                  <i data-lucide="layers" class="w-4 h-4 text-secondary"></i>
-                </div>
-                <span>La plateforme 360°</span>
-              </a>
-              <a href="notre-approche.html" class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
-                <div class="w-7 flex-shrink-0 flex items-center justify-start">
-                  <i data-lucide="leaf" class="w-4 h-4 text-secondary"></i>
-                </div>
-                <span>Notre approche</span>
-              </a>
-            </div>
-          </div>
+  <!-- La solution -->
+  <div class="relative group">
+  <button class="nav-link flex items-center gap-1.5 py-1">
+  La solution <svg xmlns="http://www.w3.org00/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-3.5 h-3.5 opacity-60 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+  </button>
+  <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-52 rounded-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-card">
+  <a href="plateforme-360.html" class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
+  <div class="w-7 flex-shrink-0 flex items-center justify-start">
+   <i data-lucide="layers" class="w-4 h-4 text-secondary"></i>
+  </div>
+  <span>La plateforme 360°</span>
+  </a>
+  <a href="notre-approche.html" class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
+  <div class="w-7 flex-shrink-0 flex items-center justify-start">
+   <i data-lucide="leaf" class="w-4 h-4 text-secondary"></i>
+  </div>
+  <span>Notre approche</span>
+  </a>
+  </div>
+  </div>
 
-          <!-- Fonctionnalités -->
-          <div class="relative group">
-            <button class="nav-link flex items-center gap-1.5 py-1">
-              Fonctionnalités <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-3.5 h-3.5 opacity-60 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
-            </button>
-            <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 rounded-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-card">
-              <a href="inscriptions.html" class="group flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
-                <div class="w-7 flex-shrink-0 flex items-center justify-start">
-                  <img src="assets/img/Strayde-inscriptions.webp" class="w-7 h-5 object-contain" alt="">
-                </div>
-                <span class="group-hover:text-[#c4d87d] transition-colors">Inscriptions</span>
-              </a>
-              <a href="benevoles.html" class="group flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
-                <div class="w-7 flex-shrink-0 flex items-center justify-start">
-                  <img src="assets/img/Strayde-benevoles.webp" class="w-7 h-5 object-contain" alt="">
-                </div>
-                <span class="group-hover:text-[#6f6fad] transition-colors">Bénévoles</span>
-              </a>
-              <a href="communication.html" class="group flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
-                <div class="w-7 flex-shrink-0 flex items-center justify-start">
-                  <img src="assets/img/Strayde-communication.webp" class="w-7 h-5 object-contain" alt="">
-                </div>
-                <span class="group-hover:text-[#1e929b] transition-colors">Communication</span>
-              </a>
-              <a href="administratif.html" class="group flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
-                <div class="w-7 flex-shrink-0 flex items-center justify-start">
-                  <img src="assets/img/Strayde-administratif.webp" class="w-7 h-5 object-contain" alt="">
-                </div>
-                <span class="group-hover:text-[#30b7c0] transition-colors">Administratif</span>
-              </a>
-            </div>
-          </div>
+  <!-- Fonctionnalités -->
+  <div class="relative group">
+  <button class="nav-link flex items-center gap-1.5 py-1">
+  Fonctionnalités <svg xmlns="http://www.w3.org00/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-3.5 h-3.5 opacity-60 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+  </button>
+  <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 rounded-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-card">
+  <a href="inscriptions.html" class="group flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
+  <div class="w-7 flex-shrink-0 flex items-center justify-start">
+   <img width="194" height="183" src="assets/img/Strayde-inscriptions.webp" class="w-7 h-5 object-contain" alt="">
+  </div>
+  <span class="group-hover:text-[#c4d87d] transition-colors">Inscriptions</span>
+  </a>
+  <a href="benevoles.html" class="group flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
+  <div class="w-7 flex-shrink-0 flex items-center justify-start">
+   <img width="287" height="182" src="assets/img/Strayde-benevoles.webp" class="w-7 h-5 object-contain" alt="">
+  </div>
+  <span class="group-hover:text-[#6f6fad] transition-colors">Bénévoles</span>
+  </a>
+  <a href="communication.html" class="group flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
+  <div class="w-7 flex-shrink-0 flex items-center justify-start">
+   <img width="230" height="183" src="assets/img/Strayde-communication.webp" class="w-7 h-5 object-contain" alt="">
+  </div>
+  <span class="group-hover:text-[#1e929b] transition-colors">Communication</span>
+  </a>
+  <a href="administratif.html" class="group flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
+  <div class="w-7 flex-shrink-0 flex items-center justify-start">
+   <img width="194" height="182" src="assets/img/Strayde-administratif.webp" class="w-7 h-5 object-contain" alt="">
+  </div>
+  <span class="group-hover:text-[#30b7c0] transition-colors">Administratif</span>
+  </a>
+  </div>
+  </div>
 
-          <!-- Pour qui ? -->
-          <div class="relative group">
-            <button class="nav-link flex items-center gap-1.5 py-1">
-              Pour qui ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-3.5 h-3.5 opacity-60 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
-            </button>
-            <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-52 rounded-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-card">
-              <a href="organisateurs.html" class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
-                <div class="w-7 flex-shrink-0 flex items-center justify-start">
-                  <i data-lucide="clipboard-list" class="w-4 h-4 text-secondary"></i>
-                </div>
-                <span>Organisateurs</span>
-              </a>
-              <a href="chronometreurs.html" class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
-                <div class="w-7 flex-shrink-0 flex items-center justify-start">
-                  <i data-lucide="timer" class="w-4 h-4 text-secondary"></i>
-                </div>
-                <span>Chronométreurs</span>
-              </a>
-              <a href="participants.html" class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
-                <div class="w-7 flex-shrink-0 flex items-center justify-start">
-                  <i data-lucide="activity" class="w-4 h-4 text-secondary"></i>
-                </div>
-                <span>Participants</span>
-              </a>
-            </div>
-          </div>
+  <!-- Pour qui ? -->
+  <div class="relative group">
+  <button class="nav-link flex items-center gap-1.5 py-1">
+  Pour qui ? <svg xmlns="http://www.w3.org00/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-3.5 h-3.5 opacity-60 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+  </button>
+  <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-52 rounded-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-card">
+  <a href="organisateurs.html" class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
+  <div class="w-7 flex-shrink-0 flex items-center justify-start">
+   <i data-lucide="clipboard-list" class="w-4 h-4 text-secondary"></i>
+  </div>
+  <span>Organisateurs</span>
+  </a>
+  <a href="chronometreurs.html" class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
+  <div class="w-7 flex-shrink-0 flex items-center justify-start">
+   <i data-lucide="timer" class="w-4 h-4 text-secondary"></i>
+  </div>
+  <span>Chronométreurs</span>
+  </a>
+  <a href="participants.html" class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
+  <div class="w-7 flex-shrink-0 flex items-center justify-start">
+   <i data-lucide="activity" class="w-4 h-4 text-secondary"></i>
+  </div>
+  <span>Participants</span>
+  </a>
+  </div>
+  </div>
 
-        </div>
+ </div>
 
-        <!-- CTA droite -->
-        <div class="flex items-center gap-3 flex-shrink-0">
-          <a href="#contact" class="nav-link text-sm">Se connecter</a>
-          <a href="#contact" class="btn-accent px-5 py-2.5 rounded-xl text-sm inline-flex items-center gap-2">
-            Demander une démo <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-          </a>
-        </div>
+ <!-- CTA droite -->
+ <div class="flex items-center gap-3 flex-shrink-0">
+  <a href="#contact" class="nav-link text-sm">Se connecter</a>
+  <a href="#contact" class="btn-accent px-5 py-2.5 rounded-xl text-sm inline-flex items-center gap-2">
+  Demander une démo <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+  </a>
+ </div>
 
-      </nav>
-      <button id="menu-btn" class="md:hidden p-2 text-white/70" aria-label="Menu">
-        <i data-lucide="menu" class="w-5 h-5"></i>
-      </button>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden px-5 pb-5 s-dark border-t border-white-8">
-      <p class="text-xs uppercase tracking-widest pt-4 pb-2 text-white-30">La solution</p>
-      <a href="plateforme-360.html" class="block py-2 text-sm hover:text-accent transition-colors text-white-65">La plateforme 360°</a>
-      <a href="notre-approche.html" class="block py-2 text-sm hover:text-accent transition-colors text-white-65">Notre approche</a>
-      <p class="text-xs uppercase tracking-widest pt-4 pb-2 text-white-30">Fonctionnalités</p>
-      <a href="inscriptions.html" class="flex items-center gap-3 py-2 text-sm hover:text-[#c4d87d] transition-colors text-white-65">
-        <div class="w-7 flex-shrink-0 flex items-center justify-start"><img src="assets/img/Strayde-inscriptions.webp" class="w-7 h-5 object-contain" alt=""></div>
-        Inscriptions
-      </a>
-      <a href="benevoles.html" class="flex items-center gap-3 py-2 text-sm hover:text-[#6f6fad] transition-colors text-white-65">
-        <div class="w-7 flex-shrink-0 flex items-center justify-start"><img src="assets/img/Strayde-benevoles.webp" class="w-7 h-5 object-contain" alt=""></div>
-        Bénévoles
-      </a>
-      <a href="communication.html" class="flex items-center gap-3 py-2 text-sm hover:text-[#1e929b] transition-colors text-white-65">
-        <div class="w-7 flex-shrink-0 flex items-center justify-start"><img src="assets/img/Strayde-communication.webp" class="w-7 h-5 object-contain" alt=""></div>
-        Communication
-      </a>
-      <a href="administratif.html" class="flex items-center gap-3 py-2 text-sm hover:text-[#30b7c0] transition-colors text-white-65">
-        <div class="w-7 flex-shrink-0 flex items-center justify-start"><img src="assets/img/Strayde-administratif.webp" class="w-7 h-5 object-contain" alt=""></div>
-        Administratif
-      </a>
-      <p class="text-xs uppercase tracking-widest pt-4 pb-2 text-white-30">Pour qui ?</p>
-      <a href="organisateurs.html" class="block py-2 text-sm hover:text-accent transition-colors text-white-65">Organisateurs</a>
-      <a href="chronometreurs.html" class="block py-2 text-sm hover:text-accent transition-colors text-white-65">Chronométreurs</a>
-      <a href="participants.html" class="block py-2 text-sm hover:text-accent transition-colors text-white-65">Participants</a>
-      <div class="flex gap-3 mt-4 pb-2">
-        <a href="#contact" class="flex-1 text-center py-3 rounded-xl text-sm font-medium transition-colors border border-white-20 text-white-75">Se connecter</a>
-        <a href="#contact" class="flex-1 btn-accent text-center py-3 rounded-xl text-sm">Demander une démo</a>
-      </div>
-    </div>
-  </header>
+ </nav>
+ <button id="menu-btn" class="md:hidden p-2 text-white/70" aria-label="Menu">
+ <i data-lucide="menu" class="w-5 h-5"></i>
+ </button>
+ </div>
+ <div id="mobile-menu" class="hidden md:hidden px-5 pb-5 s-dark border-t border-white-8">
+ <p class="text-xs uppercase tracking-widest pt-4 pb-2 text-white-30">La solution</p>
+ <a href="plateforme-360.html" class="block py-2 text-sm hover:text-accent transition-colors text-white-65">La plateforme 360°</a>
+ <a href="notre-approche.html" class="block py-2 text-sm hover:text-accent transition-colors text-white-65">Notre approche</a>
+ <p class="text-xs uppercase tracking-widest pt-4 pb-2 text-white-30">Fonctionnalités</p>
+ <a href="inscriptions.html" class="flex items-center gap-3 py-2 text-sm hover:text-[#c4d87d] transition-colors text-white-65">
+ <div class="w-7 flex-shrink-0 flex items-center justify-start"><img width="194" height="183" src="assets/img/Strayde-inscriptions.webp" class="w-7 h-5 object-contain" alt=""></div>
+ Inscriptions
+ </a>
+ <a href="benevoles.html" class="flex items-center gap-3 py-2 text-sm hover:text-[#6f6fad] transition-colors text-white-65">
+ <div class="w-7 flex-shrink-0 flex items-center justify-start"><img width="287" height="182" src="assets/img/Strayde-benevoles.webp" class="w-7 h-5 object-contain" alt=""></div>
+ Bénévoles
+ </a>
+ <a href="communication.html" class="flex items-center gap-3 py-2 text-sm hover:text-[#1e929b] transition-colors text-white-65">
+ <div class="w-7 flex-shrink-0 flex items-center justify-start"><img width="230" height="183" src="assets/img/Strayde-communication.webp" class="w-7 h-5 object-contain" alt=""></div>
+ Communication
+ </a>
+ <a href="administratif.html" class="flex items-center gap-3 py-2 text-sm hover:text-[#30b7c0] transition-colors text-white-65">
+ <div class="w-7 flex-shrink-0 flex items-center justify-start"><img width="194" height="182" src="assets/img/Strayde-administratif.webp" class="w-7 h-5 object-contain" alt=""></div>
+ Administratif
+ </a>
+ <p class="text-xs uppercase tracking-widest pt-4 pb-2 text-white-30">Pour qui ?</p>
+ <a href="organisateurs.html" class="block py-2 text-sm hover:text-accent transition-colors text-white-65">Organisateurs</a>
+ <a href="chronometreurs.html" class="block py-2 text-sm hover:text-accent transition-colors text-white-65">Chronométreurs</a>
+ <a href="participants.html" class="block py-2 text-sm hover:text-accent transition-colors text-white-65">Participants</a>
+ <div class="flex gap-3 mt-4 pb-2">
+ <a href="#contact" class="flex-1 text-center py-3 rounded-xl text-sm font-medium transition-colors border border-white-20 text-white-75">Se connecter</a>
+ <a href="#contact" class="flex-1 btn-accent text-center py-3 rounded-xl text-sm">Demander une démo</a>
+ </div>
+ </div>
+ </header>
 <main>
 <!-- HERO -->
 <section class="relative pt-32 pb-20 s-dark overflow-hidden" style="background:rgba(35,26,61,.97); border-bottom:1px solid rgba(255,255,255,.05);">
-  <div class="max-w-4xl mx-auto px-5 text-center">
-    <div class="icon-box bg-sage/50 text-accent mx-auto mb-6 rounded-2xl flex items-center justify-center w-16 h-16 animate-fade-up">
-      <img src="assets/img/Strayde-inscriptions.webp" class="h-7 w-auto object-contain" alt="">
-    </div>
-    <h1 class="font-display font-extrabold text-white leading-tight mb-4 animate-fade-up-2" style="font-size:clamp(2.5rem,6vw,4rem);letter-spacing:-.02em;">
-      Module <span class="text-[#c4d87d]">Inscriptions</span>
-    </h1>
-    <p class="leading-relaxed text-white max-w-2xl mx-auto animate-fade-up-3" style="font-size:1.15rem;">
-      Une billetterie performante, conçue spécifiquement pour les exigences complexes des sports outdoor.
-    </p>
-  </div>
+ <div class="max-w-4xl mx-auto px-5 text-center">
+ <div class="icon-box text-accent mx-auto mb-6 rounded-2xl flex items-center justify-center w-16 h-16 animate-fade-up">
+ <img width="194" height="183" src="assets/img/Strayde-inscriptions.webp" class="h-7 w-auto object-contain" alt="">
+ </div>
+ <h1 class="font-display font-extrabold text-white leading-tight mb-4 animate-fade-up-2" style="font-size:clamp(2.5rem,6vw,4rem);letter-spacing:-.02em;">
+ Module <span class="text-[#c4d87d]">Inscriptions</span>
+ </h1>
+ <p class="leading-relaxed text-white max-w-2xl mx-auto animate-fade-up-3" style="font-size:1.15rem;">
+ Une billetterie performante, conçue spécifiquement pour les exigences complexes des sports outdoor.
+ </p>
+ </div>
 </section>
 
 <!-- DETAILS -->
 <section class="py-20 bg-white">
-  <div class="max-w-6xl mx-auto px-5">
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="card p-6 reveal">
-        <h3 class="font-bold text-lg text-primary mb-3">Formulaires sur mesure</h3>
-        <p class="text-sm text-muted">Posez les bonnes questions. Numéro de licence, SAS de départ, options (repas accompagnants, tailles de navettes).</p>
-      </div>
-      <div class="card p-6 reveal">
-        <h3 class="font-bold text-lg text-primary mb-3">Tarification Dynamique</h3>
-        <p class="text-sm text-muted">Programmez des changements de tarifs automatiques en fonction des dates ou des paliers d'inscrits.</p>
-      </div>
-      <div class="card p-6 reveal">
-        <h3 class="font-bold text-lg text-primary mb-3">Gestion Documentaire (PPS/Certif)</h3>
-        <p class="text-sm text-muted">Interface de validation optimisée pour contrôler rapidement les justificatifs médicaux avec notifications automatiques en cas de refus.</p>
-      </div>
-      <div class="card p-6 reveal">
-        <h3 class="font-bold text-lg text-primary mb-3">Transfert de dossard</h3>
-        <p class="text-sm text-muted">Laissez les participants revendre et transférer leurs billets de façon sécurisée et automatisée. Fini les litiges !</p>
-      </div>
-      <div class="card p-6 reveal">
-        <h3 class="font-bold text-lg text-primary mb-3">Paiement ultra-sécurisé</h3>
-        <p class="text-sm text-muted">Virements réguliers vers le compte de votre association. Prise en charge des paiements en ligne Stripe/CB avec reporting clair.</p>
-      </div>
-      <div class="card p-6 reveal">
-        <h3 class="font-bold text-lg text-primary mb-3">Inscriptions de groupe/relais</h3>
-        <p class="text-sm text-muted">Paiement centralisé par le capitaine d'équipe, et invitations individuelles par email pour compléter les dossiers sportifs séparément.</p>
-      </div>
-    </div>
-  </div>
+ <div class="max-w-6xl mx-auto px-5">
+ <div class="grid md:grid-cols-3 gap-8">
+ <div class="card p-6 reveal">
+ <h3 class="font-bold text-lg text-primary mb-3">Formulaires sur mesure</h3>
+ <p class="text-sm text-muted">Posez les bonnes questions. Numéro de licence, SAS de départ, options (repas accompagnants, tailles de navettes).</p>
+ </div>
+ <div class="card p-6 reveal">
+ <h3 class="font-bold text-lg text-primary mb-3">Tarification Dynamique</h3>
+ <p class="text-sm text-muted">Programmez des changements de tarifs automatiques en fonction des dates ou des paliers d'inscrits.</p>
+ </div>
+ <div class="card p-6 reveal">
+ <h3 class="font-bold text-lg text-primary mb-3">Gestion Documentaire (PPS/Certif)</h3>
+ <p class="text-sm text-muted">Interface de validation optimisée pour contrôler rapidement les justificatifs médicaux avec notifications automatiques en cas de refus.</p>
+ </div>
+ <div class="card p-6 reveal">
+ <h3 class="font-bold text-lg text-primary mb-3">Transfert de dossard</h3>
+ <p class="text-sm text-muted">Laissez les participants revendre et transférer leurs billets de façon sécurisée et automatisée. Fini les litiges !</p>
+ </div>
+ <div class="card p-6 reveal">
+ <h3 class="font-bold text-lg text-primary mb-3">Paiement ultra-sécurisé</h3>
+ <p class="text-sm text-muted">Virements réguliers vers le compte de votre association. Prise en charge des paiements en ligne Stripe/CB avec reporting clair.</p>
+ </div>
+ <div class="card p-6 reveal">
+ <h3 class="font-bold text-lg text-primary mb-3">Inscriptions de groupe/relais</h3>
+ <p class="text-sm text-muted">Paiement centralisé par le capitaine d'équipe, et invitations individuelles par email pour compléter les dossiers sportifs séparément.</p>
+ </div>
+ </div>
+ </div>
 </section>
 </main>
 <footer class="py-12 s-darker" style="border-top:1px solid rgba(255,255,255,.07);">
-    <div class="max-w-6xl mx-auto px-5">
-      <div class="grid md:grid-cols-4 gap-8 mb-10">
-        <div class="md:col-span-2">
-          <img
-            src="assets/img/logo-horizontal-blanc-vert.png"
-            alt="Strayde" style="height:36px;width:auto;margin-bottom:1rem;" />
-          <p class="text-sm leading-relaxed max-w-xs" style="color:rgba(255,255,255,.38);">La plateforme 360° des
-            organisateurs d'événements sportifs outdoor. Inscriptions, bénévoles, communication, administratif — tout au
-            même endroit.</p>
-          <div class="flex gap-3 mt-5">
-            <a href="https://www.linkedin.com/company/strayde/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
-              class="w-9 h-9 rounded-xl flex items-center justify-center transition-all bg-white/5 hover:bg-white/10 text-white hover:text-white border border-white/5">
-              <i data-lucide="linkedin" style="width:1.1rem;height:1.1rem;"></i>
-            </a>
-            <a href="https://www.instagram.com/straydeapp" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
-              class="w-9 h-9 rounded-xl flex items-center justify-center transition-all bg-white/5 hover:bg-white/10 text-white hover:text-white border border-white/5">
-              <i data-lucide="instagram" style="width:1.1rem;height:1.1rem;"></i>
-            </a>
-            <a href="https://www.facebook.com/straydeapp" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
-              class="w-9 h-9 rounded-xl flex items-center justify-center transition-all bg-white/5 hover:bg-white/10 text-white hover:text-white border border-white/5">
-              <i data-lucide="facebook" style="width:1.1rem;height:1.1rem;"></i>
-            </a>
-            <a href="https://www.youtube.com/@straydeapp" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
-              class="w-9 h-9 rounded-xl flex items-center justify-center transition-all bg-white/5 hover:bg-white/10 text-white hover:text-white border border-white/5">
-              <i data-lucide="youtube" style="width:1.1rem;height:1.1rem;"></i>
-            </a>
-          </div>
-        </div>
-        <div>
-          <p class="font-semibold text-sm text-white mb-4">À propos</p>
-          <ul class="space-y-2.5">
-            <li><a href="plateforme-360.html" class="text-sm transition-colors" style="color:rgba(255,255,255,.38);"
-                onmouseover="this.style.color='#c5d97d'" onmouseout="this.style.color='rgba(255,255,255,.38)'">La plateforme</a></li>
-            <li><a href="notre-approche.html" class="text-sm transition-colors" style="color:rgba(255,255,255,.38);"
-                onmouseover="this.style.color='#c5d97d'" onmouseout="this.style.color='rgba(255,255,255,.38)'">Notre approche</a></li>
-            <li><a href="organisateurs.html" class="text-sm transition-colors" style="color:rgba(255,255,255,.38);"
-                onmouseover="this.style.color='#c5d97d'" onmouseout="this.style.color='rgba(255,255,255,.38)'">Pour qui ?</a></li>
-            <li><a href="#contact" class="text-sm transition-colors" style="color:rgba(255,255,255,.38);"
-                onmouseover="this.style.color='#c5d97d'"
-                onmouseout="this.style.color='rgba(255,255,255,.38)'">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="font-semibold text-sm text-white mb-4">Support</p>
-          <ul class="space-y-2.5">
-            <li><a href="#faq" class="text-sm transition-colors" style="color:rgba(255,255,255,.38);"
-                onmouseover="this.style.color='#c5d97d'" onmouseout="this.style.color='rgba(255,255,255,.38)'">FAQ</a>
-            </li>
-            <li><a href="#" class="text-sm transition-colors" style="color:rgba(255,255,255,.38);"
-                onmouseover="this.style.color='#c5d97d'" onmouseout="this.style.color='rgba(255,255,255,.38)'">Mentions
-                légales</a></li>
-            <li><a href="#" class="text-sm transition-colors" style="color:rgba(255,255,255,.38);"
-                onmouseover="this.style.color='#c5d97d'" onmouseout="this.style.color='rgba(255,255,255,.38)'">CGU</a>
-            </li>
-            <li><a href="#" class="text-sm transition-colors" style="color:rgba(255,255,255,.38);"
-                onmouseover="this.style.color='#c5d97d'" onmouseout="this.style.color='rgba(255,255,255,.38)'">Politique
-                de confidentialité</a></li>
-          </ul>
-        </div>
-      </div>
-      <div
-        style="height:1px;background:linear-gradient(90deg,transparent,rgba(197,217,125,.18),transparent);margin-bottom:1.5rem;">
-      </div>
-      <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p class="text-xs" style="color:rgba(255,255,255,.22);">© 2025 Strayde. Tous droits réservés. Énergie solaire ☀️
-        </p>
-        <a href="#contact" class="btn-accent px-5 py-2.5 rounded-lg text-sm inline-flex items-center gap-2">
-          Démarrer gratuitement <i data-lucide="arrow-right" style="width:.9rem;height:.9rem;"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
+ <div class="max-w-6xl mx-auto px-5">
+ <div class="grid md:grid-cols-4 gap-8 mb-10">
+ <div class="md:col-span-2">
+  <img width="748" height="208"
+  src="assets/img/logo-horizontal-blanc-vert.png"
+  alt="Strayde" style="height:36px;width:auto;margin-bottom:1rem;" />
+  <p class="text-sm leading-relaxed max-w-xs" style="color:rgba(255,255,255,.38);">La plateforme 360° des
+  organisateurs d'événements sportifs outdoor. Inscriptions, bénévoles, communication, administratif — tout au
+  même endroit.</p>
+  <div class="flex gap-3 mt-5">
+  <a href="https://www.linkedin.com/company/strayde/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+  class="w-9 h-9 rounded-xl flex items-center justify-center transition-all bg-white/5 hover:bg-white text-white hover:text-white border border-white/5">
+  <i data-lucide="linkedin" style="width:1.1rem;height:1.1rem;"></i>
+  </a>
+  <a href="https://www.instagram.com/straydeapp" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+  class="w-9 h-9 rounded-xl flex items-center justify-center transition-all bg-white/5 hover:bg-white text-white hover:text-white border border-white/5">
+  <i data-lucide="instagram" style="width:1.1rem;height:1.1rem;"></i>
+  </a>
+  <a href="https://www.facebook.com/straydeapp" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+  class="w-9 h-9 rounded-xl flex items-center justify-center transition-all bg-white/5 hover:bg-white text-white hover:text-white border border-white/5">
+  <i data-lucide="facebook" style="width:1.1rem;height:1.1rem;"></i>
+  </a>
+  <a href="https://www.youtube.com/@straydeapp" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+  class="w-9 h-9 rounded-xl flex items-center justify-center transition-all bg-white/5 hover:bg-white text-white hover:text-white border border-white/5">
+  <i data-lucide="youtube" style="width:1.1rem;height:1.1rem;"></i>
+  </a>
+  </div>
+ </div>
+ <div>
+  <p class="font-semibold text-sm text-white mb-4">À propos</p>
+  <ul class="space-y-2.5">
+  <li><a href="plateforme-360.html" class="text-sm transition-colors" style="color:rgba(255,255,255,.38);"
+  onmouseover="this.style.color='#c5d97d'" onmouseout="this.style.color='rgba(255,255,255,.38)'">La plateforme</a></li>
+  <li><a href="notre-approche.html" class="text-sm transition-colors" style="color:rgba(255,255,255,.38);"
+  onmouseover="this.style.color='#c5d97d'" onmouseout="this.style.color='rgba(255,255,255,.38)'">Notre approche</a></li>
+  <li><a href="organisateurs.html" class="text-sm transition-colors" style="color:rgba(255,255,255,.38);"
+  onmouseover="this.style.color='#c5d97d'" onmouseout="this.style.color='rgba(255,255,255,.38)'">Pour qui ?</a></li>
+  <li><a href="#contact" class="text-sm transition-colors" style="color:rgba(255,255,255,.38);"
+  onmouseover="this.style.color='#c5d97d'"
+  onmouseout="this.style.color='rgba(255,255,255,.38)'">Contact</a></li>
+  </ul>
+ </div>
+ <div>
+  <p class="font-semibold text-sm text-white mb-4">Support</p>
+  <ul class="space-y-2.5">
+  <li><a href="#faq" class="text-sm transition-colors" style="color:rgba(255,255,255,.38);"
+  onmouseover="this.style.color='#c5d97d'" onmouseout="this.style.color='rgba(255,255,255,.38)'">FAQ</a>
+  </li>
+  <li><a href="#" class="text-sm transition-colors" style="color:rgba(255,255,255,.38);"
+  onmouseover="this.style.color='#c5d97d'" onmouseout="this.style.color='rgba(255,255,255,.38)'">Mentions
+  légales</a></li>
+  <li><a href="#" class="text-sm transition-colors" style="color:rgba(255,255,255,.38);"
+  onmouseover="this.style.color='#c5d97d'" onmouseout="this.style.color='rgba(255,255,255,.38)'">CGU</a>
+  </li>
+  <li><a href="#" class="text-sm transition-colors" style="color:rgba(255,255,255,.38);"
+  onmouseover="this.style.color='#c5d97d'" onmouseout="this.style.color='rgba(255,255,255,.38)'">Politique
+  de confidentialité</a></li>
+  </ul>
+ </div>
+ </div>
+ <div
+ style="height:1px;background:linear-gradient(90deg,transparent,rgba(197,217,125,.18),transparent);margin-bottom:1.5rem;">
+ </div>
+ <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+ <p class="text-xs" style="color:rgba(255,255,255,.22);">© 2025 Strayde. Tous droits réservés. Énergie solaire ☀️
+ </p>
+ <a href="#contact" class="btn-accent px-5 py-2.5 rounded-lg text-sm inline-flex items-center gap-2">
+  Démarrer gratuitement <i data-lucide="arrow-right" style="width:.9rem;height:.9rem;"></i>
+ </a>
+ </div>
+ </div>
+ </footer>
 
-  <script src="assets/app.js"></script>
+ <script src="assets/app.js"></script>
 </body>
 </html>
