@@ -1,0 +1,42 @@
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#231a3d",
+        secondary: "#1e929b",
+        accent: "#c4d87d",
+        navy: "#36365f",
+        teal: "#30b7c0",
+        muted: "#6f6fad",
+        sage: "#dff1bb",
+        offwhite: "#f4fbe5",
+        inscriptions: "#c4d87d",
+        benevoles: "#6f6fad",
+        communication: "#1e929b",
+        administratif: "#30b7c0",
+      },
+      fontFamily: {
+        display: ["'Barlow Condensed'", "sans-serif"],
+        body: ["'DM Sans'", "sans-serif"],
+      },
+      keyframes: {
+        fadeUp: {
+          "0%": { opacity: "0", transform: "translateY(28px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        floatY: {
+          "0%,100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
+        blink: { "0%,100%": { opacity: "1" }, "50%": { opacity: "0.3" } },
+      },
+      animation: {
+        "fade-up": "fadeUp .65s ease both",
+        "fade-up-2": "fadeUp .65s .12s ease both",
+        "fade-up-3": "fadeUp .65s .25s ease both",
+        floatY: "floatY 4s ease-in-out infinite",
+        blink: "blink 2s ease-in-out infinite",
+      },
+    },
+  },
+};
