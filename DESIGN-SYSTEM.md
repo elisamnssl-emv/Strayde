@@ -12,7 +12,7 @@ La palette de couleurs principale (configurée dans Tailwind) :
 - **Teal** : `#30b7c0`
 - **Muted** : `#6f6fad`
 - **Sage** : `#dff1bb`
-- **Offwhite** : `#f4fbe5`
+- **Offwhite** : `#f4fbe5
 
 ## Typographie
 
