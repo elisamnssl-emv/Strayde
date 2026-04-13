@@ -458,7 +458,7 @@
                       sécurisés</div>
                   </div>
                 </div>
-                <div class="rounded-3xl border border-[#e8f3d0] bg-[#f7faf0] flex flex-col gap-3 p-4">
+                <div class="rounded-3xl border border-[#e8e8f4] bg-[#f7f7fb] flex flex-col gap-3 p-4">
                   <div class="grid grid-cols-2 gap-3">
                     <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex flex-col gap-3">
                       <div class="flex items-center gap-2">
@@ -985,7 +985,7 @@
                     <div class="check-item"><i data-lucide="check-circle"
                         class="w-4 h-4 text-[#9cb342] flex-shrink-0"></i>Paiements sécurisés</div>
                   </div>
-                  <div class="rounded-3xl border border-[#e8f3d0] bg-[#f7faf0] flex flex-col gap-3 p-4">
+                  <div class="rounded-3xl border border-[#e8e8f4] bg-[#f7f7fb] flex flex-col gap-3 p-4">
                     <div class="grid grid-cols-2 gap-3">
                       <div class="bg-white rounded-2xl p-3 shadow-sm border border-gray-100 flex flex-col gap-2">
                         <div class="flex items-center gap-1.5"><i data-lucide="user"
@@ -1429,7 +1429,7 @@
           </div>
 
           <div class="card-dark p-8 text-center reveal border-white-8 delay-100">
-            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5">
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5 icon-box-secondary-soft">
               <i data-lucide="timer" class="icon-size-md text-secondary"></i>
             </div>
             <h3 class="font-display font-bold text-white mb-3 card-title-fs">Je suis
@@ -1506,6 +1506,8 @@
         </div>
 
         <div class="relative group">
+          <button class="carousel-arrow carousel-arrow-left" onclick="scrollCarousel('race-carousel',-1)"
+            aria-label="Précédent"><i data-lucide="chevron-left"></i></button>
           <div id="race-carousel" class="race-carousel reveal">
             <div class="race-card px-4 py-2 select-none">
               <img src="assets/img/logo%20ecrain%20trail.webp" alt="Grand Trail des Écrins" draggable="false"
@@ -1536,6 +1538,8 @@
                 class="h-20 md:h-28 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300">
             </div>
           </div>
+          <button class="carousel-arrow carousel-arrow-right" onclick="scrollCarousel('race-carousel',1)"
+            aria-label="Suivant"><i data-lucide="chevron-right"></i></button>
         </div>
 
       </div>
@@ -1633,6 +1637,8 @@
         </div>
 
         <div class="relative reveal" id="reviews-wrapper">
+          <button class="carousel-arrow carousel-arrow-left" onclick="scrollCarousel('reviews-carousel',-1)"
+            aria-label="Précédent"><i data-lucide="chevron-left"></i></button>
           <div id="reviews-carousel" class="race-carousel">
 
             <div class="race-card w-80 flex-shrink-0 select-none px-2">
@@ -1773,7 +1779,88 @@
               </div>
             </div>
 
+            <div class="race-card w-80 flex-shrink-0 select-none px-2">
+              <div class="card rounded-2xl p-5 flex flex-col gap-3 h-full">
+                <div class="flex gap-1 justify-center">
+                  <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-yellow-400"></i><i data-lucide="star"
+                    class="w-5 h-5 text-yellow-400 fill-yellow-400"></i><i data-lucide="star"
+                    class="w-5 h-5 text-yellow-400 fill-yellow-400"></i><i data-lucide="star"
+                    class="w-5 h-5 text-yellow-400 fill-yellow-400"></i><i data-lucide="star"
+                    class="w-5 h-5 text-yellow-400 fill-yellow-400"></i>
+                </div>
+                <p class="text-sm text-gray-600 leading-relaxed flex-1">Une plateforme répondant parfaitement à notre
+                  besoin. Une équipe réactive derrière pour répondre à nos besoins et optimiser la gestion des
+                  inscriptions. Une plateforme qui évolue au gré des demandes en ajoutant des modules tels celui pour
+                  les bénévoles, la bourse aux dossards... L'EMSAM Athlétisme et l'Association Les 30 Bornes de St Paër
+                  la recommande vivement.</p>
+                <div class="border-t border-gray-100 pt-3">
+                  <p class="font-semibold text-primary text-sm">Thierry Laboulais</p>
+                  <p class="text-xs text-muted">il y a 10 mois</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="race-card w-80 flex-shrink-0 select-none px-2">
+              <div class="card rounded-2xl p-5 flex flex-col gap-3 h-full">
+                <div class="flex gap-1 justify-center">
+                  <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-yellow-400"></i><i data-lucide="star"
+                    class="w-5 h-5 text-yellow-400 fill-yellow-400"></i><i data-lucide="star"
+                    class="w-5 h-5 text-yellow-400 fill-yellow-400"></i><i data-lucide="star"
+                    class="w-5 h-5 text-yellow-400 fill-yellow-400"></i><i data-lucide="star"
+                    class="w-5 h-5 text-yellow-400 fill-yellow-400"></i>
+                </div>
+                <p class="text-sm text-gray-600 leading-relaxed flex-1">Je recommande sans hésiter la plateforme Strayde
+                  pour l'organisation des événements. Tout est personnalisable, modifiable et adaptable. De nombreuses
+                  options sont disponibles, et l'organisateur a la main sur tout cela de manière très simple. Pour la
+                  Foulée Pintervillaise (course à pieds), nous n'hésiterons pas à renouveler notre partenariat.</p>
+                <div class="border-t border-gray-100 pt-3">
+                  <p class="font-semibold text-primary text-sm">Maxime LE ROUX</p>
+                  <p class="text-xs text-muted">il y a 10 mois</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="race-card w-80 flex-shrink-0 select-none px-2">
+              <div class="card rounded-2xl p-5 flex flex-col gap-3 h-full">
+                <div class="flex gap-1 justify-center">
+                  <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-yellow-400"></i><i data-lucide="star"
+                    class="w-5 h-5 text-yellow-400 fill-yellow-400"></i><i data-lucide="star"
+                    class="w-5 h-5 text-yellow-400 fill-yellow-400"></i><i data-lucide="star"
+                    class="w-5 h-5 text-yellow-400 fill-yellow-400"></i><i data-lucide="star"
+                    class="w-5 h-5 text-yellow-400 fill-yellow-400"></i>
+                </div>
+                <p class="text-sm text-gray-600 leading-relaxed flex-1">Pour l'organisation des 10 km de Yerville 2024,
+                  nous avons utilisé Strayde. Cette plateforme est ultra simple d'utilisation, pratique et permettant
+                  toute sorte d'exports excel. L'outil de validation des justificatifs des inscriptions est dynamique et
+                  rapide. Je recommande fortement cette plateforme d'inscription en ligne pour vos épreuves.</p>
+                <div class="border-t border-gray-100 pt-3">
+                  <p class="font-semibold text-primary text-sm">Samuel GENDRIN</p>
+                  <p class="text-xs text-muted">il y a un an</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="race-card w-80 flex-shrink-0 select-none px-2">
+              <div class="card rounded-2xl p-5 flex flex-col gap-3 h-full">
+                <div class="flex gap-1 justify-center">
+                  <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-yellow-400"></i><i data-lucide="star"
+                    class="w-5 h-5 text-yellow-400 fill-yellow-400"></i><i data-lucide="star"
+                    class="w-5 h-5 text-yellow-400 fill-yellow-400"></i><i data-lucide="star"
+                    class="w-5 h-5 text-yellow-400 fill-yellow-400"></i><i data-lucide="star"
+                    class="w-5 h-5 text-yellow-400 fill-yellow-400"></i>
+                </div>
+                <p class="text-sm text-gray-600 leading-relaxed flex-1">Une super plateforme d'inscriptions : simple
+                  d'utilisation, ergonomique et évolutive pour notre triathlon M de Royan.</p>
+                <div class="border-t border-gray-100 pt-3">
+                  <p class="font-semibold text-primary text-sm">David LACOMBE</p>
+                  <p class="text-xs text-muted">il y a 2 ans</p>
+                </div>
+              </div>
+            </div>
+
           </div>
+          <button class="carousel-arrow carousel-arrow-right" onclick="scrollCarousel('reviews-carousel',1)"
+            aria-label="Suivant"><i data-lucide="chevron-right"></i></button>
         </div>
       </div>
     </section>
@@ -1868,6 +1955,13 @@
   </footer>
 
   <script src="assets/app.js"></script>
+  <script>
+    function scrollCarousel(id, dir) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.scrollBy({ left: dir * 320, behavior: 'smooth' });
+    }
+  </script>
 </body>
 
 </html>
