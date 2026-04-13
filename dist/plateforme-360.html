@@ -178,32 +178,9 @@
         </p>
         <div class="flex flex-wrap justify-center gap-3 animate-fade-up-3">
           <a href="#modules" class="btn-accent px-6 py-3 rounded-xl text-sm inline-flex items-center gap-2">Découvrir
-            les modules <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i></a>
+            les modules <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
           <a href="#contact"
             class="btn-outline-light px-6 py-3 rounded-xl text-sm inline-flex items-center gap-2">Demander une démo</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-14 bg-[#f4fbe5] border-b border-[#e8f3d0]">
-      <div class="max-w-5xl mx-auto px-5">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <div class="reveal">
-            <p class="font-display font-extrabold text-4xl text-primary mb-1">1 200+</p>
-            <p class="text-sm text-muted">Organisateurs actifs</p>
-          </div>
-          <div class="reveal">
-            <p class="font-display font-extrabold text-4xl text-[#1e929b] mb-1">98%</p>
-            <p class="text-sm text-muted">Taux de satisfaction</p>
-          </div>
-          <div class="reveal">
-            <p class="font-display font-extrabold text-4xl text-[#9cb342] mb-1">-30h</p>
-            <p class="text-sm text-muted">Gagnées par édition</p>
-          </div>
-          <div class="reveal">
-            <p class="font-display font-extrabold text-4xl text-primary mb-1">4</p>
-            <p class="text-sm text-muted">Modules intégrés</p>
-          </div>
         </div>
       </div>
     </section>
@@ -253,15 +230,81 @@
               class="inline-flex items-center gap-2 text-sm font-semibold text-[#9cb342] hover:text-primary transition-colors">Voir
               le module inscriptions <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
           </div>
-          <div class="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+
+          <div class="rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
             <div class="bg-[#231a3d] px-4 py-2 flex items-center gap-2">
               <span class="w-3 h-3 rounded-full bg-[#ff5f57]"></span>
               <span class="w-3 h-3 rounded-full bg-[#febc2e]"></span>
               <span class="w-3 h-3 rounded-full bg-[#28c840]"></span>
-              <span class="ml-3 text-xs text-white/40">app.strayde.com · Inscriptions</span>
+              <span class="ml-3 text-xs text-white/40">app.strayde.com · Dashboard</span>
             </div>
-            <img src="assets/img/capture%20plateforme.webp" alt="Interface inscriptions Strayde" class="w-full block"
-              loading="lazy">
+            <div class="p-4 flex flex-col gap-3 bg-[#f8f9fa]">
+              <div class="grid grid-cols-2 gap-3">
+                <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex flex-col gap-3">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="user" class="w-5 h-5 text-[#1e929b]"></i>
+                    <span class="text-2xl font-extrabold text-primary">107</span>
+                    <span class="text-[10px] font-semibold text-gray-400 mt-1">Inscriptions</span>
+                  </div>
+                  <div class="flex flex-col gap-1.5">
+                    <div class="flex justify-between text-[10px]"><span class="flex items-center gap-1.5"><span
+                          class="w-2 h-2 rounded-full bg-[#c4d87d]"></span>Validées</span><span
+                        class="font-bold text-primary">82</span></div>
+                    <div class="flex justify-between text-[10px]"><span class="flex items-center gap-1.5"><span
+                          class="w-2 h-2 rounded-full bg-[#6f6fad]"></span>A valider</span><span
+                        class="font-bold text-primary">0</span></div>
+                    <div class="flex justify-between text-[10px]"><span class="flex items-center gap-1.5"><span
+                          class="w-2 h-2 rounded-full bg-red-400"></span>Refusées</span><span
+                        class="font-bold text-primary">1</span></div>
+                    <div class="flex justify-between text-[10px]"><span class="flex items-center gap-1.5"><span
+                          class="w-2 h-2 rounded-full bg-gray-300"></span>Incomplètes</span><span
+                        class="font-bold text-primary">22</span></div>
+                  </div>
+                </div>
+                <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex flex-col gap-3">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="euro" class="w-5 h-5 text-[#1e929b]"></i>
+                    <span class="text-2xl font-extrabold text-primary">1 412</span>
+                  </div>
+                  <span class="text-[10px] font-semibold text-gray-400">Collecté (€)</span>
+                  <div class="border-t border-gray-50 pt-2 flex flex-col gap-1.5">
+                    <div class="flex justify-between text-[10px]"><span class="text-gray-400">Inscrip.</span><span
+                        class="font-semibold text-primary">1 412 €</span></div>
+                    <div class="flex justify-between text-[10px]"><span class="text-gray-400">Options</span><span
+                        class="font-semibold text-primary">0 €</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                <table class="w-full text-left">
+                  <thead>
+                    <tr class="text-[8px] font-bold text-gray-400 uppercase border-b border-gray-50 bg-gray-50">
+                      <th class="px-3 py-2">Nom</th>
+                      <th class="px-3 py-2">Prénom</th>
+                      <th class="px-3 py-2">Course</th>
+                      <th class="px-3 py-2 text-right">Etat</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-50">
+                    <tr class="text-[9px]">
+                      <td class="px-3 py-2 font-semibold text-primary uppercase">Moreau</td>
+                      <td class="px-3 py-2 text-gray-600">Sophie</td>
+                      <td class="px-3 py-2 text-gray-400">20 Km Indiv.</td>
+                      <td class="px-3 py-2 text-right"><span
+                          class="bg-[#c4d87d] text-primary font-bold text-[8px] px-2 py-0.5 rounded-full">Validé</span>
+                      </td>
+                    </tr>
+                    <tr class="text-[9px]">
+                      <td class="px-3 py-2 font-semibold text-primary uppercase">Dubois</td>
+                      <td class="px-3 py-2 text-gray-600">Antoine</td>
+                      <td class="px-3 py-2 text-gray-400">20 Km Indiv.</td>
+                      <td class="px-3 py-2 text-right"><span
+                          class="bg-primary text-white font-bold text-[8px] px-2 py-0.5 rounded-full">Annulé</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
 
