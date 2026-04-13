@@ -1,431 +1,273 @@
 <!DOCTYPE html>
 <html lang='fr'>
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Gestion administrative | Strayde</title>
-  <meta name="description"
-    content="Exports préfecture, certificats, trésorerie : Strayde automatise toute la paperasse." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="assets/tailwind.config.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet" />
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="assets/style.css" />
-  <link rel="preload" href="assets/style.css" as="style" />
-  <link rel="preload" href="assets/img/logo%20strayde.webp" as="image" />
-  <style>
-    .accordion-content {
-      display: none
-    }
-
-    .accordion-content.open {
-      display: block
-    }
-
-    .accordion-icon {
-      transition: transform 0.2s
-    }
-
-    .accordion-item.open .accordion-icon {
-      transform: rotate(45deg)
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>Gestion administrative | Strayde</title>
+<meta name="description" content="Simplifiez la lourdeur de vos démarches administratives, de la préfecture à vos autorisations locales." />
+<meta property="og:title" content="Gestion administrative | Strayde" />
+<meta property="og:description" content="Simplifiez la lourdeur de vos démarches administratives, de la préfecture à vos autorisations locales." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://strayde.com" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/tailwind.config.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+ href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+ rel="stylesheet" />
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="assets/style.css" />
+<link rel="preload" href="assets/style.css" as="style" />
+<link rel="preload" href="assets/img/logo%20strayde.webp" as="image" />
 </head>
-
 <body class='font-body antialiased'>
-  <header id="nav" class="fixed top-0 w-full z-50 s-dark header-glass">
-    <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between relative">
-      <a href="index.html"><img src="assets/img/logo%20strayde.webp" width="130" height="36" class="h-10 w-auto"
-          alt="Strayde"></a>
-      <nav class="hidden md:flex flex-1 items-center justify-between ml-8">
-        <div class="flex items-center gap-8 mx-auto">
-          <div class="relative group"><button class="nav-link flex items-center gap-1.5 py-1">La solution <svg
-                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="w-3.5 h-3.5 opacity-60">
-                <path d="m6 9 6 6 6-6"></path>
-              </svg></button>
-            <div
-              class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-52 rounded-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-card">
-              <a href="plateforme-360.html"
-                class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 text-white-75">
-                <div class="w-7"><i data-lucide="layers" class="w-4 h-4 text-secondary"></i></div><span>La plateforme
-                  360°</span>
-              </a>
-              <a href="notre-approche.html"
-                class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 text-white-75">
-                <div class="w-7"><i data-lucide="leaf" class="w-4 h-4 text-secondary"></i></div><span>Notre
-                  approche</span>
-              </a>
-            </div>
-          </div>
-          <div class="relative group"><button class="nav-link flex items-center gap-1.5 py-1">Fonctionnalités <svg
-                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="w-3.5 h-3.5 opacity-60">
-                <path d="m6 9 6 6 6-6"></path>
-              </svg></button>
-            <div
-              class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 rounded-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-card">
-              <a href="inscriptions.html"
-                class="group flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 text-white-75">
-                <div class="w-7"><img src="assets/img/icone%20inscriptions.webp" width="28" height="20"
-                    class="object-contain" alt=""></div><span class="group-hover:text-[#c4d87d]">Inscriptions</span>
-              </a>
-              <a href="benevoles.html"
-                class="group flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 text-white-75">
-                <div class="w-7"><img src="assets/img/icone%20benevole.webp" width="28" height="20"
-                    class="object-contain" alt=""></div><span class="group-hover:text-[#6f6fad]">Bénévoles</span>
-              </a>
-              <a href="communication.html"
-                class="group flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 text-white-75">
-                <div class="w-7"><img src="assets/img/icone%20communication.webp" width="28" height="20"
-                    class="object-contain" alt=""></div><span class="group-hover:text-[#1e929b]">Communication</span>
-              </a>
-              <a href="administratif.html"
-                class="group flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 text-white-75">
-                <div class="w-7"><img src="assets/img/icone%20administratif.webp" width="28" height="20"
-                    class="object-contain" alt=""></div><span class="group-hover:text-[#30b7c0]">Administratif</span>
-              </a>
-            </div>
-          </div>
-          <div class="relative group"><button class="nav-link flex items-center gap-1.5 py-1">Pour qui ? <svg
-                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="w-3.5 h-3.5 opacity-60">
-                <path d="m6 9 6 6 6-6"></path>
-              </svg></button>
-            <div
-              class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-52 rounded-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-card">
-              <a href="organisateurs.html"
-                class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 text-white-75">
-                <div class="w-7"><i data-lucide="clipboard-list" class="w-4 h-4 text-secondary"></i></div>
-                <span>Organisateurs</span>
-              </a>
-              <a href="chronometreurs.html"
-                class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 text-white-75">
-                <div class="w-7"><i data-lucide="timer" class="w-4 h-4 text-secondary"></i></div>
-                <span>Chronométreurs</span>
-              </a>
-              <a href="participants.html"
-                class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 text-white-75">
-                <div class="w-7"><i data-lucide="activity" class="w-4 h-4 text-secondary"></i></div>
-                <span>Participants</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="flex items-center gap-3 flex-shrink-0">
-          <a href="#contact" class="nav-link text-sm">Se connecter</a>
-          <a href="#contact" class="btn-accent px-5 py-2.5 rounded-xl text-sm inline-flex items-center gap-2">Demander
-            une démo <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
-        </div>
-      </nav>
-      <button id="menu-btn" class="md:hidden p-2 text-white/70" aria-label="Menu"><i data-lucide="menu"
-          class="w-5 h-5"></i></button>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden px-5 pb-5 s-dark border-t border-white-8">
-      <p class="text-xs uppercase tracking-widest pt-4 pb-2 text-white-30">La solution</p>
-      <a href="plateforme-360.html" class="block py-2 text-sm hover:text-accent text-white-65">La plateforme 360°</a>
-      <a href="notre-approche.html" class="block py-2 text-sm hover:text-accent text-white-65">Notre approche</a>
-      <p class="text-xs uppercase tracking-widest pt-4 pb-2 text-white-30">Fonctionnalités</p>
-      <a href="inscriptions.html" class="flex items-center gap-3 py-2 text-sm hover:text-[#c4d87d] text-white-65">
-        <div class="w-7"><img src="assets/img/icone%20inscriptions.webp" width="28" height="20" class="object-contain"
-            alt=""></div>Inscriptions
-      </a>
-      <a href="benevoles.html" class="flex items-center gap-3 py-2 text-sm hover:text-[#6f6fad] text-white-65">
-        <div class="w-7"><img src="assets/img/icone%20benevole.webp" width="28" height="20" class="object-contain"
-            alt=""></div>Bénévoles
-      </a>
-      <a href="communication.html" class="flex items-center gap-3 py-2 text-sm hover:text-[#1e929b] text-white-65">
-        <div class="w-7"><img src="assets/img/icone%20communication.webp" width="28" height="20" class="object-contain"
-            alt=""></div>Communication
-      </a>
-      <a href="administratif.html" class="flex items-center gap-3 py-2 text-sm hover:text-[#30b7c0] text-white-65">
-        <div class="w-7"><img src="assets/img/icone%20administratif.webp" width="28" height="20" class="object-contain"
-            alt=""></div>Administratif
-      </a>
-      <p class="text-xs uppercase tracking-widest pt-4 pb-2 text-white-30">Pour qui ?</p>
-      <a href="organisateurs.html" class="block py-2 text-sm hover:text-accent text-white-65">Organisateurs</a>
-      <a href="chronometreurs.html" class="block py-2 text-sm hover:text-accent text-white-65">Chronométreurs</a>
-      <a href="participants.html" class="block py-2 text-sm hover:text-accent text-white-65">Participants</a>
-      <div class="flex gap-3 mt-4 pb-2">
-        <a href="#contact"
-          class="flex-1 text-center py-3 rounded-xl text-sm font-medium border border-white-20 text-white-75">Se
-          connecter</a>
-        <a href="#contact" class="flex-1 btn-accent text-center py-3 rounded-xl text-sm">Demander une démo</a>
-      </div>
-    </div>
-  </header>
-  <main>
-    <section class="s-dark relative overflow-hidden pt-32 pb-20">
-      <div class="absolute inset-0 z-0"
-        style="background:radial-gradient(ellipse 60% 70% at 50% 40%,rgba(48,183,192,.08),transparent);"></div>
-      <div class="max-w-5xl mx-auto px-5 relative z-10">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <div class="flex items-center gap-3 mb-5 animate-fade-up">
-              <div
-                style="width:40px;height:40px;border-radius:10px;background:transparent;border:1.5px solid #30b7c0;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                <img src="assets/img/icone%20administratif.webp" width="20" height="14" class="object-contain" alt="">
-              </div>
-              <span class="text-xs font-bold uppercase tracking-widest text-[#30b7c0]">Module 04</span>
-            </div>
-            <h1 class="font-display font-extrabold text-white mb-5 animate-fade-up-2"
-              style="font-size:clamp(2.0rem,4vw,3.0rem);letter-spacing:-0.01em;">La paperasse,<br><span
-                style="color:#5bc4cc">on s'en charge</span></h1>
-            <p class="leading-relaxed text-white/70 mb-8 animate-fade-up-3" style="font-size:1.05rem;">Exports
-              préfecture, trésorerie, certificats médicaux : Strayde automatise tout ce qui ne devrait pas vous prendre
-              de temps.</p>
-            <div class="flex flex-wrap gap-3 animate-fade-up-3">
-              <a href="#contact" class="btn-accent px-6 py-3 rounded-xl text-sm inline-flex items-center gap-2">Démarrer
-                gratuitement <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
-              <a href="plateforme-360.html" class="btn-outline-light px-6 py-3 rounded-xl text-sm">Voir tous les
-                modules</a>
-            </div>
-          </div>
-          <div class="rounded-2xl overflow-hidden shadow-2xl animate-fade-up-3">
-            <div class="bg-[#231a3d] px-4 py-2 flex items-center gap-2">
-              <span class="w-3 h-3 rounded-full bg-[#ff5f57]"></span><span
-                class="w-3 h-3 rounded-full bg-[#febc2e]"></span><span class="w-3 h-3 rounded-full bg-[#28c840]"></span>
-              <span class="ml-3 text-xs text-white/40">app.strayde.com · Administratif</span>
-            </div>
-            <div class="bg-[#f8f9fa] p-5 space-y-3">
-              <div class="bg-white rounded-xl p-3 shadow-sm border border-gray-100 flex items-center gap-3">
-                <div class="w-9 h-9 rounded-xl bg-[#e0f4f5] flex items-center justify-center flex-shrink-0"><i
-                    data-lucide="file-check" class="w-4 h-4 text-[#30b7c0]"></i></div>
-                <div class="flex-1">
-                  <p class="text-xs font-bold text-primary">Export préfecture</p>
-                  <p class="text-[10px] text-gray-400">Généré automatiquement · PDF</p>
-                </div><span class="text-[9px] font-bold text-white bg-[#30b7c0] px-2 py-0.5 rounded-full">Prêt</span>
-              </div>
-              <div class="bg-white rounded-xl p-3 shadow-sm border border-gray-100 flex items-center gap-3">
-                <div class="w-9 h-9 rounded-xl bg-[#e0f4f5] flex items-center justify-center flex-shrink-0"><i
-                    data-lucide="shield-check" class="w-4 h-4 text-[#30b7c0]"></i></div>
-                <div class="flex-1">
-                  <p class="text-xs font-bold text-primary">Certificats médicaux</p>
-                  <p class="text-[10px] text-gray-400">842 vérifiés · 3 en attente</p>
-                </div>
-                <div class="h-1.5 w-16 bg-gray-100 rounded-full overflow-hidden">
-                  <div class="h-full bg-[#30b7c0] rounded-full w-[97%]"></div>
-                </div>
-              </div>
-              <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-                <div class="flex justify-between items-center mb-2">
-                  <p class="text-xs font-bold text-primary">Bilan financier</p><span
-                    class="text-sm font-extrabold text-[#30b7c0]">3 240 €</span>
-                </div>
-                <div class="h-2 w-full bg-gray-100 rounded-full overflow-hidden mb-1">
-                  <div class="h-full bg-[#30b7c0] rounded-full w-[75%]"></div>
-                </div>
-                <div class="flex justify-between text-[9px] text-gray-400"><span>Collecté</span><span>Objectif : 4 320
-                    €</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<header id="nav" class="fixed top-0 w-full z-50 s-dark header-glass">
+  <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between relative">
+   <a href="index.html"><img src="assets/img/logo%20strayde.webp" width="130" height="36" class="h-10 w-auto" alt="Strayde"></a>
+   <!-- Nav desktop -->
+   <nav class="hidden md:flex flex-1 items-center justify-between ml-8">
 
-    <section class="py-24 bg-offwhite">
-      <div class="max-w-4xl mx-auto px-5">
-        <div class="text-center mb-14 reveal">
-          <span class="mp-teal-light module-pill mb-4 inline-block">Fonctionnalités</span>
-          <h2 class="font-display font-extrabold text-primary mt-3 mb-4 fs-section-title">Tout ce qui vous fait <span
-              style="color:#30b7c0">perdre du temps</span>, automatisé</h2>
-        </div>
-        <div class="space-y-3 reveal">
-          <div class="accordion-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
-            <button onclick="toggleAccordion(this)"
-              class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors">
-              <div class="flex items-center gap-4"><i data-lucide="download"
-                  class="w-5 h-5 text-[#30b7c0] flex-shrink-0"></i><span class="font-semibold text-primary">Export
-                  chronométreur</span></div>
-              <i data-lucide="plus" class="w-5 h-5 text-gray-400 accordion-icon flex-shrink-0"></i>
-            </button>
-            <div class="accordion-content px-6 pb-5">
-              <p class="text-muted leading-relaxed mb-3">Générez un fichier CSV/Excel normalisé en un clic : numéros de
-                dossards, puces, noms, catégories FFA calculées automatiquement. Compatible avec tous les logiciels de
-                chronométrage.</p>
-              <ul class="space-y-1.5">
-                <li class="flex items-center gap-2 text-sm text-muted"><i data-lucide="check"
-                    class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Catégories FFA calculées automatiquement</li>
-                <li class="flex items-center gap-2 text-sm text-muted"><i data-lucide="check"
-                    class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>CSV/Excel compatible tous logiciels</li>
-                <li class="flex items-center gap-2 text-sm text-muted"><i data-lucide="check"
-                    class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Numéros de puces électroniques intégrés</li>
-              </ul>
-            </div>
-          </div>
-          <div class="accordion-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
-            <button onclick="toggleAccordion(this)"
-              class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors">
-              <div class="flex items-center gap-4"><i data-lucide="file-signature"
-                  class="w-5 h-5 text-[#30b7c0] flex-shrink-0"></i><span class="font-semibold text-primary">Dossier
-                  préfecture</span></div>
-              <i data-lucide="plus" class="w-5 h-5 text-gray-400 accordion-icon flex-shrink-0"></i>
-            </button>
-            <div class="accordion-content px-6 pb-5">
-              <p class="text-muted leading-relaxed mb-3">Centralisation de tous les chiffres liés à vos inscriptions,
-                idéal pour remplir le CERFA ou le module Manifestations Sportives de l'État. Fini les tableaux croisés à
-                la main.</p>
-              <ul class="space-y-1.5">
-                <li class="flex items-center gap-2 text-sm text-muted"><i data-lucide="check"
-                    class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Données agrégées par épreuve et catégorie</li>
-                <li class="flex items-center gap-2 text-sm text-muted"><i data-lucide="check"
-                    class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Export PDF et Excel compatible CERFA</li>
-                <li class="flex items-center gap-2 text-sm text-muted"><i data-lucide="check"
-                    class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Mise à jour automatique au fil des inscriptions
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="accordion-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
-            <button onclick="toggleAccordion(this)"
-              class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors">
-              <div class="flex items-center gap-4"><i data-lucide="shield-alert"
-                  class="w-5 h-5 text-[#30b7c0] flex-shrink-0"></i><span class="font-semibold text-primary">Logistique
-                  secours (Croix-Rouge / SDIS)</span></div>
-              <i data-lucide="plus" class="w-5 h-5 text-gray-400 accordion-icon flex-shrink-0"></i>
-            </button>
-            <div class="accordion-content px-6 pb-5">
-              <p class="text-muted leading-relaxed mb-3">Exportez les informations médicales clés et numéros d'urgence
-                des participants pour le PC Course, la Croix-Rouge et vos prestataires de secours. Conformité RGPD
-                garantie.</p>
-              <ul class="space-y-1.5">
-                <li class="flex items-center gap-2 text-sm text-muted"><i data-lucide="check"
-                    class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Export Croix-Rouge / SDIS en un clic</li>
-                <li class="flex items-center gap-2 text-sm text-muted"><i data-lucide="check"
-                    class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Infos médicales et contacts d'urgence</li>
-                <li class="flex items-center gap-2 text-sm text-muted"><i data-lucide="check"
-                    class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Accès restreint et conforme RGPD</li>
-              </ul>
-            </div>
-          </div>
-          <div class="accordion-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
-            <button onclick="toggleAccordion(this)"
-              class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors">
-              <div class="flex items-center gap-4"><i data-lucide="calculator"
-                  class="w-5 h-5 text-[#30b7c0] flex-shrink-0"></i><span class="font-semibold text-primary">Suivi
-                  financier en temps réel</span></div>
-              <i data-lucide="plus" class="w-5 h-5 text-gray-400 accordion-icon flex-shrink-0"></i>
-            </button>
-            <div class="accordion-content px-6 pb-5">
-              <p class="text-muted leading-relaxed mb-3">Un dashboard clair de votre trésorerie. Revenus bruts,
-                commissions, remboursements : clôturez l'exercice de votre association sereinement avec des exports
-                comptables prêts à l'emploi.</p>
-              <ul class="space-y-1.5">
-                <li class="flex items-center gap-2 text-sm text-muted"><i data-lucide="check"
-                    class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Dashboard trésorerie en temps réel</li>
-                <li class="flex items-center gap-2 text-sm text-muted"><i data-lucide="check"
-                    class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Exports comptables pour votre association</li>
-                <li class="flex items-center gap-2 text-sm text-muted"><i data-lucide="check"
-                    class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Historique des virements reçus</li>
-              </ul>
-            </div>
-          </div>
-          <div class="accordion-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
-            <button onclick="toggleAccordion(this)"
-              class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors">
-              <div class="flex items-center gap-4"><i data-lucide="user-plus"
-                  class="w-5 h-5 text-[#30b7c0] flex-shrink-0"></i><span class="font-semibold text-primary">Accès
-                  collaborateurs multi-niveaux</span></div>
-              <i data-lucide="plus" class="w-5 h-5 text-gray-400 accordion-icon flex-shrink-0"></i>
-            </button>
-            <div class="accordion-content px-6 pb-5">
-              <p class="text-muted leading-relaxed mb-3">Donnez le bon niveau d'accès à chaque membre de votre équipe :
-                lecture seule pour le secrétariat, validation médicale pour votre responsable santé, vue globale pour
-                l'administrateur.</p>
-              <ul class="space-y-1.5">
-                <li class="flex items-center gap-2 text-sm text-muted"><i data-lucide="check"
-                    class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Accès "Lecture seule" pour le secrétariat</li>
-                <li class="flex items-center gap-2 text-sm text-muted"><i data-lucide="check"
-                    class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Accès "Validation médicale" restreint</li>
-                <li class="flex items-center gap-2 text-sm text-muted"><i data-lucide="check"
-                    class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Vue globale administrateur</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Centre : 3 menus côte à côte -->
+    <div class="flex items-center gap-8 mx-auto">
 
-    <section id="contact" class="py-24 s-dark relative overflow-hidden">
-      <div class="contact-overlay"></div>
-      <div class="max-w-3xl mx-auto px-5 relative z-10 text-center">
-        <span class="mp-teal-light module-pill mb-5 inline-block">Gratuit, sans engagement</span>
-        <h2 class="font-display font-extrabold text-white mb-4 mt-3 fs-section-title">Concentrez-vous<br><span
-            class="hl-teal">sur votre course</span></h2>
-        <p class="mb-10 text-white-55 max-w-xl mx-auto">La paperasse, c'est notre affaire. Rejoignez les organisateurs
-          qui ont récupéré des heures sur leur administration.</p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <a href="https://app.strayde.com/signin"
-            class="btn-accent px-8 py-4 rounded-xl text-base inline-flex items-center justify-center gap-2">Démarrer
-            gratuitement <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-          <a href="plateforme-360.html"
-            class="btn-outline-light px-8 py-4 rounded-xl text-base inline-flex items-center justify-center gap-2">Voir
-            tous les modules</a>
+     <!-- La solution -->
+     <div class="relative group">
+      <button class="nav-link flex items-center gap-1.5 py-1">
+       La solution <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-3.5 h-3.5 opacity-60 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+      </button>
+      <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-52 rounded-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-card">
+       <a href="plateforme-360.html" class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
+        <div class="w-7 flex-shrink-0 flex items-center justify-start">
+         <i data-lucide="layers" class="w-4 h-4 text-secondary"></i>
         </div>
+        <span>La plateforme 360°</span>
+       </a>
+       <a href="notre-approche.html" class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
+        <div class="w-7 flex-shrink-0 flex items-center justify-start">
+         <i data-lucide="leaf" class="w-4 h-4 text-secondary"></i>
+        </div>
+        <span>Notre approche</span>
+       </a>
       </div>
-    </section>
-  </main>
-  <footer class="py-12 s-darker border-t border-white-8">
-    <div class="max-w-6xl mx-auto px-5">
-      <div class="grid md:grid-cols-4 gap-8 mb-10">
-        <div class="md:col-span-2"><img src="assets/img/logo%20strayde.webp" width="130" height="36" alt="Strayde"
-            class="h-9 w-auto mb-4" />
-          <p class="text-sm leading-relaxed max-w-xs text-white-38">La plateforme qui simplifie l'organisation
-            d'événements sportifs outdoor.</p>
-          <div class="flex gap-3 mt-5"><a href="https://www.linkedin.com/company/strayde/" target="_blank"
-              rel="noopener noreferrer" aria-label="LinkedIn"
-              class="w-9 h-9 rounded-xl flex items-center justify-center bg-white/5 hover:bg-white/10 border border-white/5"><img
-                src="assets/img/icone%20linkedin.webp" width="20" height="20" class="object-contain"
-                alt="LinkedIn"></a><a href="https://www.instagram.com/straydeapp" target="_blank"
-              rel="noopener noreferrer" aria-label="Instagram"
-              class="w-9 h-9 rounded-xl flex items-center justify-center bg-white/5 hover:bg-white/10 border border-white/5"><img
-                src="assets/img/icone%20instagram.webp" width="20" height="20" class="object-contain"
-                alt="Instagram"></a><a href="https://www.facebook.com/straydeapp" target="_blank"
-              rel="noopener noreferrer" aria-label="Facebook"
-              class="w-9 h-9 rounded-xl flex items-center justify-center bg-white/5 hover:bg-white/10 border border-white/5"><img
-                src="assets/img/icone%20facebook.webp" width="20" height="20" class="object-contain"
-                alt="Facebook"></a><a href="https://www.youtube.com/@straydeapp" target="_blank"
-              rel="noopener noreferrer" aria-label="YouTube"
-              class="w-9 h-9 rounded-xl flex items-center justify-center bg-white/5 hover:bg-white/10 border border-white/5"><img
-                src="assets/img/icone%20youtube.webp" width="20" height="20" class="object-contain" alt="YouTube"></a>
-          </div>
+     </div>
+
+     <!-- Fonctionnalités -->
+     <div class="relative group">
+      <button class="nav-link flex items-center gap-1.5 py-1">
+       Fonctionnalités <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-3.5 h-3.5 opacity-60 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+      </button>
+      <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 rounded-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-card">
+       <a href="inscriptions.html" class="group flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
+        <div class="w-7 flex-shrink-0 flex items-center justify-start">
+         <img src="assets/img/icone%20inscriptions.webp" width="28" height="20" class="object-contain" alt="">
         </div>
-        <div>
-          <p class="font-semibold text-sm text-white mb-4">À propos</p>
-          <ul class="space-y-2.5">
-            <li><a href="plateforme-360.html" class="text-sm text-white-38 hover:text-accent">La plateforme</a></li>
-            <li><a href="notre-approche.html" class="text-sm text-white-38 hover:text-accent">Notre approche</a></li>
-            <li><a href="organisateurs.html" class="text-sm text-white-38 hover:text-accent">Pour qui ?</a></li>
-            <li><a href="#contact" class="text-sm text-white-38 hover:text-accent">Contact</a></li>
-          </ul>
+        <span class="group-hover:text-[#c4d87d] transition-colors">Inscriptions</span>
+       </a>
+       <a href="benevoles.html" class="group flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
+        <div class="w-7 flex-shrink-0 flex items-center justify-start">
+         <img src="assets/img/icone%20benevole.webp" width="28" height="20" class="object-contain" alt="">
         </div>
-        <div>
-          <p class="font-semibold text-sm text-white mb-4">Support</p>
-          <ul class="space-y-2.5">
-            <li><a href="index.html#faq" class="text-sm text-white-38 hover:text-accent">FAQ</a></li>
-            <li><a href="mentions-legales.html" class="text-sm text-white-38 hover:text-accent">Mentions légales</a>
-            </li>
-            <li><a href="https://www.strayde.com/cgus.pdf" target="_blank" rel="noopener noreferrer"
-                class="text-sm text-white-38 hover:text-accent">Conditions générales</a></li>
-            <li><a href="politique-confidentialite.html" class="text-sm text-white-38 hover:text-accent">Politique de
-                confidentialité</a></li>
-          </ul>
+        <span class="group-hover:text-[#6f6fad] transition-colors">Bénévoles</span>
+       </a>
+       <a href="communication.html" class="group flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
+        <div class="w-7 flex-shrink-0 flex items-center justify-start">
+         <img src="assets/img/icone%20communication.webp" width="28" height="20" class="object-contain" alt="">
         </div>
+        <span class="group-hover:text-[#1e929b] transition-colors">Communication</span>
+       </a>
+       <a href="administratif.html" class="group flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
+        <div class="w-7 flex-shrink-0 flex items-center justify-start">
+         <img src="assets/img/icone%20administratif.webp" width="28" height="20" class="object-contain" alt="">
+        </div>
+        <span class="group-hover:text-[#30b7c0] transition-colors">Administratif</span>
+       </a>
       </div>
-      <div class="divider-accent mb-6"></div>
-      <p class="text-xs text-white-22 text-center sm:text-left">© 2026 Strayde. Tous droits réservés.</p>
+     </div>
+
+     <!-- Pour qui ? -->
+     <div class="relative group">
+      <button class="nav-link flex items-center gap-1.5 py-1">
+       Pour qui ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-3.5 h-3.5 opacity-60 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+      </button>
+      <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-52 rounded-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-card">
+       <a href="organisateurs.html" class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
+        <div class="w-7 flex-shrink-0 flex items-center justify-start">
+         <i data-lucide="clipboard-list" class="w-4 h-4 text-secondary"></i>
+        </div>
+        <span>Organisateurs</span>
+       </a>
+       <a href="chronometreurs.html" class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
+        <div class="w-7 flex-shrink-0 flex items-center justify-start">
+         <i data-lucide="timer" class="w-4 h-4 text-secondary"></i>
+        </div>
+        <span>Chronométreurs</span>
+       </a>
+       <a href="participants.html" class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
+        <div class="w-7 flex-shrink-0 flex items-center justify-start">
+         <i data-lucide="activity" class="w-4 h-4 text-secondary"></i>
+        </div>
+        <span>Participants</span>
+       </a>
+      </div>
+     </div>
+
     </div>
-  </footer>
-  <script src="assets/app.js"></script>
-  <script>function toggleAccordion(btn) { const item = btn.closest('.accordion-item'); const content = item.querySelector('.accordion-content'); const isOpen = item.classList.contains('open'); document.querySelectorAll('.accordion-item.open').forEach(el => { el.classList.remove('open'); el.querySelector('.accordion-content').classList.remove('open'); }); if (!isOpen) { item.classList.add('open'); content.classList.add('open'); } }</script>
+
+    <!-- CTA droite -->
+    <div class="flex items-center gap-3 flex-shrink-0">
+     <a href="#contact" class="nav-link text-sm">Se connecter</a>
+     <a href="#contact" class="btn-accent px-5 py-2.5 rounded-xl text-sm inline-flex items-center gap-2">
+      Demander une démo <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+     </a>
+    </div>
+
+   </nav>
+   <button id="menu-btn" class="md:hidden p-2 text-white/70" aria-label="Menu">
+    <i data-lucide="menu" class="w-5 h-5"></i>
+   </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden px-5 pb-5 s-dark border-t border-white-8">
+   <p class="text-xs uppercase tracking-widest pt-4 pb-2 text-white-30">La solution</p>
+   <a href="plateforme-360.html" class="block py-2 text-sm hover:text-accent transition-colors text-white-65">La plateforme 360°</a>
+   <a href="notre-approche.html" class="block py-2 text-sm hover:text-accent transition-colors text-white-65">Notre approche</a>
+   <p class="text-xs uppercase tracking-widest pt-4 pb-2 text-white-30">Fonctionnalités</p>
+   <a href="inscriptions.html" class="flex items-center gap-3 py-2 text-sm hover:text-[#c4d87d] transition-colors text-white-65">
+    <div class="w-7 flex-shrink-0 flex items-center justify-start"><img src="assets/img/icone%20inscriptions.webp" width="28" height="20" class="object-contain" alt=""></div>
+    Inscriptions
+   </a>
+   <a href="benevoles.html" class="flex items-center gap-3 py-2 text-sm hover:text-[#6f6fad] transition-colors text-white-65">
+    <div class="w-7 flex-shrink-0 flex items-center justify-start"><img src="assets/img/icone%20benevole.webp" width="28" height="20" class="object-contain" alt=""></div>
+    Bénévoles
+   </a>
+   <a href="communication.html" class="flex items-center gap-3 py-2 text-sm hover:text-[#1e929b] transition-colors text-white-65">
+    <div class="w-7 flex-shrink-0 flex items-center justify-start"><img src="assets/img/icone%20communication.webp" width="28" height="20" class="object-contain" alt=""></div>
+    Communication
+   </a>
+   <a href="administratif.html" class="flex items-center gap-3 py-2 text-sm hover:text-[#30b7c0] transition-colors text-white-65">
+    <div class="w-7 flex-shrink-0 flex items-center justify-start"><img src="assets/img/icone%20administratif.webp" width="28" height="20" class="object-contain" alt=""></div>
+    Administratif
+   </a>
+   <p class="text-xs uppercase tracking-widest pt-4 pb-2 text-white-30">Pour qui ?</p>
+   <a href="organisateurs.html" class="block py-2 text-sm hover:text-accent transition-colors text-white-65">Organisateurs</a>
+   <a href="chronometreurs.html" class="block py-2 text-sm hover:text-accent transition-colors text-white-65">Chronométreurs</a>
+   <a href="participants.html" class="block py-2 text-sm hover:text-accent transition-colors text-white-65">Participants</a>
+   <div class="flex gap-3 mt-4 pb-2">
+    <a href="#contact" class="flex-1 text-center py-3 rounded-xl text-sm font-medium transition-colors border border-white-20 text-white-75">Se connecter</a>
+    <a href="#contact" class="flex-1 btn-accent text-center py-3 rounded-xl text-sm">Demander une démo</a>
+   </div>
+  </div>
+ </header>
+<main>
+<section class="relative pt-32 pb-20 s-dark overflow-hidden" style="background:rgba(35,26,61,.97); border-bottom:1px solid rgba(255,255,255,.05);">
+ <div class="max-w-4xl mx-auto px-5 text-center">
+ <div class="icon-box text-teal mx-auto mb-6 rounded-2xl flex items-center justify-center w-16 h-16 animate-fade-up">
+ <img src="assets/img/icone%20administratif.webp" width="28" height="20" class="object-contain" alt="">
+ </div>
+ <h1 class="font-display font-extrabold text-white leading-tight mb-4 animate-fade-up-2" style="font-size:clamp(2.5rem,6vw,4rem);letter-spacing:-.02em;">
+ Module <span class="text-[#30b7c0]">Administratif</span>
+ </h1>
+ <p class="leading-relaxed text-white max-w-2xl mx-auto animate-fade-up-3" style="font-size:1.15rem;">
+ On adore la course à pied... On aime un peu moins la paperasse. Laissez Strayde automatiser les tâches ingrates.
+ </p>
+ </div>
+</section>
+
+<section class="py-20 bg-white">
+ <div class="max-w-6xl mx-auto px-5">
+ <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+ <div class="card p-6 reveal hover:-translate-y-1">
+ <i data-lucide="download" class="w-6 h-6 text-secondary mb-4"></i>
+ <h3 class="font-bold text-lg text-primary mb-3">Export chronométreur rapide</h3>
+ <p class="text-sm text-muted">Générez un fichier CSV/Excel normalisé en un clic comprenant numéros de dossards, puces, noms et catégories FFA calculées automatiquement.</p>
+ </div>
+ 
+ <div class="card p-6 reveal hover:-translate-y-1">
+ <i data-lucide="shield-alert" class="w-6 h-6 text-secondary mb-4"></i>
+ <h3 class="font-bold text-lg text-primary mb-3">Logistique secours (Croix-Rouge/SDIS)</h3>
+ <p class="text-sm text-muted">Exportez les informations médicales clés et numéros d'urgence des participants pour le PC Course et vos prestataires de secours.</p>
+ </div>
+ 
+ <div class="card p-6 reveal hover:-translate-y-1">
+ <i data-lucide="calculator" class="w-6 h-6 text-secondary mb-4"></i>
+ <h3 class="font-bold text-lg text-primary mb-3">Suivi Financier Simplifié</h3>
+ <p class="text-sm text-muted">Un dashboard clair de votre trésorerie. Revenus bruts, commissions, et exports comptables faciles pour clôre l'exercice de l'association sereinement.</p>
+ </div>
+ 
+ <div class="card p-6 reveal hover:-translate-y-1">
+ <i data-lucide="file-signature" class="w-6 h-6 text-secondary mb-4"></i>
+ <h3 class="font-bold text-lg text-primary mb-3">Dossier Préfecture</h3>
+ <p class="text-sm text-muted">Centralisation de tous les chiffres liés aux inscriptions, idéal pour remplir le CERFA ou le module Manifestations Sportives de l'Etat.</p>
+ </div>
+ 
+ <div class="card p-6 reveal hover:-translate-y-1">
+ <i data-lucide="user-plus" class="w-6 h-6 text-secondary mb-4"></i>
+ <h3 class="font-bold text-lg text-primary mb-3">Accès Collaborateurs multi-niveaux</h3>
+ <p class="text-sm text-muted">Donnez un accès"Lecture seule" au secrétariat, un accès"Validation Médicale" à votre équipe contrôle, et gardez la vue globale administrateur.</p>
+ </div>
+ </div>
+ </div>
+</section>
+</main>
+<footer class="py-12 s-darker border-t border-white-8">
+  <div class="max-w-6xl mx-auto px-5">
+   <div class="grid md:grid-cols-4 gap-8 mb-10">
+    <div class="md:col-span-2">
+     <img
+      src="assets/img/logo%20strayde.webp"
+      width="130" height="36"
+      alt="Strayde" class="h-9 w-auto mb-4" />
+     <p class="text-sm leading-relaxed max-w-xs text-white-38">La plateforme qui simplifie l’organisation d'événements sportifs outdoor. Inscriptions, bénévoles, communication, administratif : tout au même endroit.</p>
+     <div class="flex gap-3 mt-5">
+      <a href="https://www.linkedin.com/company/strayde/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+       class="w-9 h-9 rounded-xl flex items-center justify-center transition-all bg-white/5 hover:bg-white/10 text-white hover:text-white border border-white/5">
+       <img src="assets/img/icone%20linkedin.webp" width="20" height="20" class="object-contain" alt="LinkedIn">
+      </a>
+      <a href="https://www.instagram.com/straydeapp" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+       class="w-9 h-9 rounded-xl flex items-center justify-center transition-all bg-white/5 hover:bg-white/10 text-white hover:text-white border border-white/5">
+       <img src="assets/img/icone%20instagram.webp" width="20" height="20" class="object-contain" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/straydeapp" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+       class="w-9 h-9 rounded-xl flex items-center justify-center transition-all bg-white/5 hover:bg-white/10 text-white hover:text-white border border-white/5">
+       <img src="assets/img/icone%20facebook.webp" width="20" height="20" class="object-contain" alt="Facebook">
+      </a>
+      <a href="https://www.youtube.com/@straydeapp" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+       class="w-9 h-9 rounded-xl flex items-center justify-center transition-all bg-white/5 hover:bg-white/10 text-white hover:text-white border border-white/5">
+       <img src="assets/img/icone%20youtube.webp" width="20" height="20" class="object-contain" alt="YouTube">
+      </a>
+     </div>
+    </div>
+    <div>
+     <p class="font-semibold text-sm text-white mb-4">À propos</p>
+     <ul class="space-y-2.5">
+      <li><a href="plateforme-360.html" class="text-sm transition-colors text-white-38 hover:text-accent">La plateforme</a></li>
+      <li><a href="notre-approche.html" class="text-sm transition-colors text-white-38 hover:text-accent">Notre approche</a></li>
+      <li><a href="organisateurs.html" class="text-sm transition-colors text-white-38 hover:text-accent">Pour qui ?</a></li>
+      <li><a href="#contact" class="text-sm transition-colors text-white-38 hover:text-accent">Contact</a></li>
+     </ul>
+    </div>
+    <div>
+     <p class="font-semibold text-sm text-white mb-4">Support</p>
+     <ul class="space-y-2.5">
+      <li><a href="#faq" class="text-sm transition-colors text-white-38 hover:text-accent">FAQ</a>
+      </li>
+      <li><a href="mentions-legales.html" class="text-sm transition-colors text-white-38 hover:text-accent">Mentions
+        légales</a></li>
+      <li><a href="https://www.strayde.com/cgus.pdf" target="_blank" rel="noopener noreferrer" class="text-sm transition-colors text-white-38 hover:text-accent">Conditions générales</a>
+      </li>
+      <li><a href="politique-confidentialite.html" class="text-sm transition-colors text-white-38 hover:text-accent">Politique
+        de confidentialité</a></li>
+     </ul>
+    </div>
+   </div>
+   <div class="divider-accent mb-6">
+   </div>
+   <div class="flex justify-center sm:justify-start items-center">
+    <p class="text-xs text-white-22">© 2026 Strayde. Tous droits réservés.</p>
+   </div>
+  </div>
+ </footer>
+
+ <script src="assets/app.js"></script>
 </body>
-
 </html>

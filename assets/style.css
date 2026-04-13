@@ -628,6 +628,14 @@ body {
   border: 1.5px solid #e8edf2
 }
 
+@media (max-width: 767px) {
+  .hero-section {
+    min-height: auto;
+    padding-top: 4.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
 @media print {
   body {
     font-size: 12pt
