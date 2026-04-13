@@ -29,13 +29,10 @@
     <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between relative">
       <a href="index.html"><img src="assets/img/logo%20strayde.webp" width="130" height="36" class="h-10 w-auto"
           alt="Strayde"></a>
-      <!-- Nav desktop -->
       <nav class="hidden md:flex flex-1 items-center justify-between ml-8">
 
-        <!-- Centre : 3 menus côte à côte -->
         <div class="flex items-center gap-8 mx-auto">
 
-          <!-- La solution -->
           <div class="relative group">
             <button class="nav-link flex items-center gap-1.5 py-1">
               La solution <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -64,7 +61,6 @@
             </div>
           </div>
 
-          <!-- Fonctionnalités -->
           <div class="relative group">
             <button class="nav-link flex items-center gap-1.5 py-1">
               Fonctionnalités <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -107,7 +103,6 @@
             </div>
           </div>
 
-          <!-- Pour qui ? -->
           <div class="relative group">
             <button class="nav-link flex items-center gap-1.5 py-1">
               Pour qui ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -133,19 +128,11 @@
                 </div>
                 <span>Chronométreurs</span>
               </a>
-              <a href="participants.html"
-                class="flex items-center gap-2 px-4 py-3 text-sm hover:bg-white/5 transition-colors text-white-75">
-                <div class="w-7 flex-shrink-0 flex items-center justify-start">
-                  <i data-lucide="activity" class="w-4 h-4 text-secondary"></i>
-                </div>
-                <span>Participants</span>
-              </a>
             </div>
           </div>
 
         </div>
 
-        <!-- CTA droite -->
         <div class="flex items-center gap-3 flex-shrink-0">
           <a href="#contact" class="nav-link text-sm">Se connecter</a>
           <a href="#contact" class="btn-accent px-5 py-2.5 rounded-xl text-sm inline-flex items-center gap-2">
@@ -194,8 +181,6 @@
         class="block py-2 text-sm hover:text-accent transition-colors text-white-65">Organisateurs</a>
       <a href="chronometreurs.html"
         class="block py-2 text-sm hover:text-accent transition-colors text-white-65">Chronométreurs</a>
-      <a href="participants.html"
-        class="block py-2 text-sm hover:text-accent transition-colors text-white-65">Participants</a>
       <div class="flex gap-3 mt-4 pb-2">
         <a href="#contact"
           class="flex-1 text-center py-3 rounded-xl text-sm font-medium transition-colors border border-white-20 text-white-75">Se
@@ -205,15 +190,12 @@
     </div>
   </header>
   <main>
-    <!-- ══════════════════════════ HERO ══════════════════════════ -->
     <section class="s-dark hero-section">
       <div class="hero-glow"></div>
       <div
         class="max-w-7xl mx-auto px-5 grid lg:grid-cols-[2fr_3fr] gap-10 items-center w-full pt-6 pb-16 relative z-10">
 
-        <!-- Left -->
         <div>
-          <!-- Module badges -->
           <div class="flex flex-nowrap overflow-x-auto gap-2 mb-10 animate-fade-up pb-2">
             <span class="module-pill mp-inscriptions whitespace-nowrap"><img src="assets/img/icone%20inscriptions.webp"
                 alt="" width="28" height="20" class="object-contain">Inscriptions</span>
@@ -234,8 +216,7 @@
 
           <p class="leading-relaxed mb-12 max-w-lg animate-fade-up-3 hero-subtitle">
             De l'ouverture des inscriptions à la remise des résultats, Strayde centralise <strong
-              class="text-white-75">tout
-              ce dont vous avez besoin</strong> pour organiser vos événements
+              class="text-white-75">tout ce dont vous avez besoin</strong> pour organiser vos événements
             outdoor : inscriptions, bénévoles, communication et gestion administrative au même endroit, sans jongler
             entre dix outils.
           </p>
@@ -251,7 +232,6 @@
             </a>
           </div>
 
-          <!-- Labels fédérations -->
           <div class="flex flex-wrap items-center gap-4 mt-8 animate-fade-up-3">
             <span class="text-white-30 text-xs font-medium whitespace-nowrap">Agréé par</span>
             <div class="h-px bg-white/10 w-4 flex-shrink-0"></div>
@@ -263,7 +243,6 @@
 
         </div>
 
-        <!-- Right -->
         <div class="hidden lg:flex relative justify-end animate-fade-up-3">
           <div class="relative w-full">
             <div class="animate-floatY window-mockup flex flex-col bg-[#f7faf0] overflow-hidden">
@@ -277,7 +256,7 @@
                 </div>
               </div>
 
-              <div class="p-4 flex flex-col gap-3">
+              <div class="p-4 flex flex-col gap-3 bg-[#f7faf0] w-full border-t border-gray-100 rounded-b-xl">
                 <div class="grid grid-cols-2 gap-3">
                   <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex flex-col gap-3">
                     <div class="flex items-center gap-2">
@@ -401,13 +380,9 @@
           </div>
         </div>
 
-
       </div>
     </section>
 
-
-
-    <!-- ══════════════════════════ 4 MODULES ══════════════════════════ -->
     <section id="modules" class="py-12 md:py-24 bg-white">
       <div class="max-w-6xl mx-auto px-5">
 
@@ -423,9 +398,7 @@
           </p>
         </div>
 
-        <!-- Modules Interactive Menu -->
         <div class="reveal">
-          <!-- Tab Buttons Group -->
           <div class="hidden md:flex flex-wrap justify-center gap-4 mb-12">
             <button onclick="showModule('inscriptions')" id="btn-inscriptions"
               class="module-tab active px-10 py-5 rounded-2xl border transition-all flex items-center justify-center gap-4 w-full sm:w-64 group">
@@ -456,9 +429,7 @@
             </button>
           </div>
 
-          <!-- Module Content Cards -->
           <div class="hidden md:block max-w-4xl mx-auto">
-            <!-- Inscriptions Content -->
             <div id="mod-inscriptions"
               class="module-content active card p-8 md:p-12 animate-in fade-in slide-in-from-bottom-4 duration-500">
               <div class="grid md:grid-cols-2 gap-10 items-center">
@@ -487,11 +458,8 @@
                       sécurisés</div>
                   </div>
                 </div>
-                <!-- Mini dashboard inscriptions -->
                 <div class="rounded-3xl border border-[#e8f3d0] bg-[#f7faf0] flex flex-col gap-3 p-4">
-                  <!-- Ligne du haut : stats + finance/camembert -->
                   <div class="grid grid-cols-2 gap-3">
-                    <!-- Card inscriptions -->
                     <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex flex-col gap-3">
                       <div class="flex items-center gap-2">
                         <i data-lucide="user" class="w-5 h-5 text-[#1e929b]"></i>
@@ -516,7 +484,6 @@
                             class="font-bold text-primary">2</span></div>
                       </div>
                     </div>
-                    <!-- Card finance -->
                     <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex flex-col gap-3">
                       <div class="flex items-center gap-2">
                         <i data-lucide="euro" class="w-5 h-5 text-[#1e929b]"></i>
@@ -532,7 +499,6 @@
                       </div>
                     </div>
                   </div>
-                  <!-- Table dernières inscriptions -->
                   <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
                     <p class="text-[10px] font-bold text-primary px-4 pt-3 pb-2 border-b border-gray-50">Dernières
                       inscriptions</p>
@@ -581,7 +547,6 @@
               </div>
             </div>
 
-            <!-- Bénévoles Content -->
             <div id="mod-benevoles" class="module-content hidden card p-8 md:p-12">
               <div class="grid md:grid-cols-2 gap-10 items-center">
                 <div>
@@ -611,11 +576,8 @@
                       matériel</div>
                   </div>
                 </div>
-                <!-- Mini dashboard bénévoles -->
                 <div class="rounded-3xl p-4 border border-[#e8e8f4] bg-[#f7f7fb] flex flex-col gap-3">
-                  <!-- Ligne 1 -->
                   <div class="grid grid-cols-2 gap-3">
-                    <!-- Card Bénévoles -->
                     <div class="bg-white rounded-2xl p-4 shadow-sm flex flex-col gap-2">
                       <div class="flex items-center gap-2">
                         <i data-lucide="users" class="w-5 h-5 text-[#1e929b]"></i>
@@ -632,7 +594,6 @@
                       </div>
                       <p class="text-[9px] text-[#1e929b] font-semibold mt-1">Voir tous les bénévoles &rsaquo;</p>
                     </div>
-                    <!-- Card Bénévoles à notifier -->
                     <div class="bg-white rounded-2xl p-4 shadow-sm flex flex-col gap-2">
                       <div class="flex items-center gap-2">
                         <i data-lucide="send" class="w-5 h-5 text-[#1e929b]"></i>
@@ -650,9 +611,7 @@
                       </div>
                     </div>
                   </div>
-                  <!-- Ligne 2 -->
                   <div class="grid grid-cols-2 gap-3">
-                    <!-- Card Missions -->
                     <div class="bg-white rounded-2xl p-4 shadow-sm flex flex-col gap-2">
                       <div class="flex items-center gap-2">
                         <i data-lucide="crosshair" class="w-5 h-5 text-[#1e929b]"></i>
@@ -669,7 +628,6 @@
                       </div>
                       <p class="text-[9px] text-[#1e929b] font-semibold mt-1">Voir toutes les missions &rsaquo;</p>
                     </div>
-                    <!-- Card Candidatures -->
                     <div class="bg-white rounded-2xl p-4 shadow-sm flex flex-col gap-2">
                       <div class="flex items-center gap-2">
                         <i data-lucide="layout-list" class="w-5 h-5 text-[#1e929b]"></i>
@@ -697,7 +655,6 @@
               </div>
             </div>
 
-            <!-- Communication Content -->
             <div id="mod-communication" class="module-content hidden card p-8 md:p-12">
               <div class="grid md:grid-cols-2 gap-10 items-center">
                 <div>
@@ -724,9 +681,7 @@
                       ouvertures / clics</div>
                   </div>
                 </div>
-                <!-- Éditeur email -->
                 <div class="rounded-3xl border border-[#d0eef0] bg-[#f4fafb] overflow-hidden flex flex-col">
-                  <!-- Stepper -->
                   <div class="flex items-center gap-1 px-4 py-3 border-b border-[#d0eef0] bg-white">
                     <div class="flex items-center gap-1 text-[9px] font-bold text-[#1e929b]"><span
                         class="w-4 h-4 rounded-full bg-[#c4d87d] flex items-center justify-center text-primary text-[8px]">✓</span>Campagne
@@ -744,11 +699,8 @@
                         class="w-4 h-4 rounded-full bg-gray-100 flex items-center justify-center text-[8px]">4</span>Envoi
                     </div>
                   </div>
-                  <!-- Corps éditeur : aperçu + panneau -->
                   <div class="flex gap-0 flex-1">
-                    <!-- Aperçu email -->
                     <div class="flex-1 p-3 flex flex-col gap-2 border-r border-[#d0eef0]">
-                      <!-- Champs objet / expéditeur -->
                       <div class="bg-white rounded-lg px-3 py-2 border border-gray-100 shadow-sm flex flex-col gap-1.5">
                         <div class="flex flex-col gap-0.5">
                           <p class="text-[8px] text-gray-400 font-semibold">Objet de la campagne</p>
@@ -760,9 +712,7 @@
                           <p class="text-[9px] text-gray-500 border border-gray-100 rounded px-2 py-1">Strayde</p>
                         </div>
                       </div>
-                      <!-- Preview email -->
                       <div class="bg-white rounded-lg border border-gray-100 shadow-sm overflow-hidden flex flex-col">
-                        <!-- Header email -->
                         <div class="bg-[#231a3d] px-3 py-2.5 flex flex-col items-center gap-1.5">
                           <div class="flex items-center gap-1.5">
                             <div
@@ -789,7 +739,6 @@
                             </div>
                           </div>
                         </div>
-                        <!-- Body email -->
                         <div class="px-3 py-2 flex flex-col gap-1.5">
                           <p class="text-[9px] font-bold text-primary">Hey {prenom}, Strayde vous simplifie encore plus
                             l'organisation !</p>
@@ -803,7 +752,6 @@
                         </div>
                       </div>
                     </div>
-                    <!-- Panneau blocs -->
                     <div class="w-20 flex flex-col bg-white border-l border-gray-50">
                       <p class="text-[7px] font-bold text-gray-400 uppercase tracking-widest px-2 pt-2 pb-1">Content</p>
                       <div class="grid grid-cols-2 gap-1 px-1.5">
@@ -854,7 +802,6 @@
               </div>
             </div>
 
-            <!-- Administratif Content -->
             <div id="mod-administratif" class="module-content hidden card p-8 md:p-12">
               <div class="grid md:grid-cols-2 gap-10 items-center">
                 <div>
@@ -883,16 +830,11 @@
                       vos fichiers</div>
                   </div>
                 </div>
-                <!-- Timeline planning -->
                 <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden p-4">
-                  <!-- Zone tâches + timeline -->
                   <div class="relative">
-                    <!-- Grille 3 colonnes : FÉVR. / MARS / AVR. -->
                     <div class="grid grid-cols-3 gap-x-3 mb-0">
 
-                      <!-- Colonne FÉVR. -->
                       <div class="flex flex-col items-start gap-1.5 relative">
-                        <!-- Ligne verticale pointillée -->
                         <div
                           class="absolute left-[calc(50%-0.5px)] top-0 bottom-6 border-l border-dashed border-[#c4d87d]">
                         </div>
@@ -930,7 +872,6 @@
                         </div>
                       </div>
 
-                      <!-- Colonne MARS -->
                       <div class="flex flex-col items-start justify-end gap-1.5 relative">
                         <div
                           class="absolute left-[calc(50%-0.5px)] top-0 bottom-6 border-l border-dashed border-[#c4d87d]">
@@ -945,7 +886,6 @@
                         </div>
                       </div>
 
-                      <!-- Colonne AVR. -->
                       <div class="flex flex-col items-start justify-end gap-1.5 relative">
                         <div
                           class="absolute left-[calc(50%-0.5px)] top-0 bottom-6 border-l border-dashed border-[#c4d87d]">
@@ -961,10 +901,8 @@
                       </div>
                     </div>
 
-                    <!-- Axe horizontal -->
                     <div class="relative mt-1 h-5">
                       <div class="absolute top-2 left-0 right-0 h-px bg-gray-200"></div>
-                      <!-- Dots -->
                       <div
                         class="absolute top-[3px] left-[calc(16.6%-5px)] w-[10px] h-[10px] rounded-full bg-[#c4d87d] border-2 border-white shadow-sm z-10">
                       </div>
@@ -976,7 +914,6 @@
                       </div>
                     </div>
 
-                    <!-- Labels mois -->
                     <div class="grid grid-cols-3 mt-1">
                       <p class="text-[8px] font-bold text-gray-400">FÉVR.</p>
                       <p class="text-[8px] font-bold text-gray-400">MARS</p>
@@ -984,7 +921,6 @@
                     </div>
                     <p class="text-[7px] text-gray-300 mt-0.5">2026</p>
                   </div>
-                  <!-- To do list -->
                   <div class="mt-3 border-t border-gray-50 pt-3">
                     <p class="text-[9px] font-bold text-primary uppercase tracking-widest mb-2">7 tâches en attente</p>
                     <div class="flex flex-col divide-y divide-dashed divide-gray-100">
@@ -1018,450 +954,439 @@
               </div>
             </div>
           </div>
-        </div>
 
+          <div class="md:hidden space-y-2 mt-4">
 
-
-        <!-- Mobile Accordion (shown only below md breakpoint) -->
-        <div class="md:hidden space-y-2 mt-4">
-
-          <!-- Inscriptions -->
-          <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm">
-            <button onclick="toggleMobAccordion('mob-ins', this)"
-              class="w-full flex items-center justify-between px-5 py-4 text-left">
-              <div class="flex items-center gap-3">
-                <div class="flex-shrink-0"><img src="assets/img/icone%20inscriptions.webp" alt="" width="28" height="20"
-                    class="object-contain" /></div>
-                <div>
-                  <p class="text-[10px] font-bold uppercase tracking-widest text-[#9cb342]">Module 01</p>
-                  <p class="font-bold text-[#9cb342] text-base leading-tight">Inscriptions</p>
-                </div>
-              </div>
-              <i data-lucide="chevron-down"
-                class="w-4 h-4 text-gray-400 flex-shrink-0 transition-transform duration-200"></i>
-            </button>
-            <div id="mob-ins" class="hidden px-5 pb-5 border-t border-gray-50">
-              <div class="pt-4">
-                <p class="text-sm text-gray-600 leading-relaxed mb-4">Ouvrez vos inscriptions en quelques minutes.
-                  Profitez de fonctionnalités avancées pour adapter votre plateforme à vos besoins : personnalisation à
-                  vos couleurs, tarifs progressifs, app de retrait dossards, et bien plus encore.</p>
-                <div class="space-y-2 mb-5">
-                  <div class="check-item"><i data-lucide="check-circle"
-                      class="w-4 h-4 text-[#9cb342] flex-shrink-0"></i>Formulaires personnalisables</div>
-                  <div class="check-item"><i data-lucide="check-circle"
-                      class="w-4 h-4 text-[#9cb342] flex-shrink-0"></i>Liste d'attente automatisées</div>
-                  <div class="check-item"><i data-lucide="check-circle"
-                      class="w-4 h-4 text-[#9cb342] flex-shrink-0"></i>Paiements sécurisés</div>
-                </div>
-                <div class="rounded-3xl border border-[#e8f3d0] bg-[#f7faf0] flex flex-col gap-3 p-4">
-                  <div class="grid grid-cols-2 gap-3">
-                    <div class="bg-white rounded-2xl p-3 shadow-sm border border-gray-100 flex flex-col gap-2">
-                      <div class="flex items-center gap-1.5"><i data-lucide="user"
-                          class="w-4 h-4 text-[#1e929b]"></i><span
-                          class="text-xl font-extrabold text-primary">107</span><span
-                          class="text-[10px] font-semibold text-gray-400">Inscrits</span></div>
-                      <div class="flex flex-col gap-1">
-                        <div class="flex justify-between text-[10px]"><span class="flex items-center gap-1"><span
-                              class="w-2 h-2 rounded-full bg-[#c4d87d]"></span>Validées</span><span
-                            class="font-bold text-primary">82</span></div>
-                        <div class="flex justify-between text-[10px]"><span class="flex items-center gap-1"><span
-                              class="w-2 h-2 rounded-full bg-[#6f6fad]"></span>A valider</span><span
-                            class="font-bold text-primary">0</span></div>
-                        <div class="flex justify-between text-[10px]"><span class="flex items-center gap-1"><span
-                              class="w-2 h-2 rounded-full bg-red-400"></span>Refusées</span><span
-                            class="font-bold text-primary">1</span></div>
-                        <div class="flex justify-between text-[10px]"><span class="flex items-center gap-1"><span
-                              class="w-2 h-2 rounded-full bg-gray-300"></span>Incomplètes</span><span
-                            class="font-bold text-primary">22</span></div>
-                      </div>
-                    </div>
-                    <div class="bg-white rounded-2xl p-3 shadow-sm border border-gray-100 flex flex-col gap-2">
-                      <div class="flex items-center gap-1.5"><i data-lucide="euro"
-                          class="w-4 h-4 text-[#1e929b]"></i><span class="text-xl font-extrabold text-primary">1
-                          412</span></div>
-                      <span class="text-[10px] font-semibold text-gray-400">Total collecté</span>
-                      <div class="border-t border-gray-50 pt-1.5 flex flex-col gap-1">
-                        <div class="flex justify-between text-[10px]"><span
-                            class="text-gray-400">Inscriptions</span><span class="font-semibold text-primary">1
-                            412€</span></div>
-                        <div class="flex justify-between text-[10px]"><span class="text-gray-400">Options</span><span
-                            class="font-semibold text-primary">0€</span></div>
-                      </div>
-                    </div>
+            <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm">
+              <button onclick="toggleMobAccordion('mob-ins', this)"
+                class="w-full flex items-center justify-between px-5 py-4 text-left">
+                <div class="flex items-center gap-3">
+                  <div class="flex-shrink-0"><img src="assets/img/icone%20inscriptions.webp" alt="" width="28"
+                      height="20" class="object-contain" /></div>
+                  <div>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-[#9cb342]">Module 01</p>
+                    <p class="font-bold text-[#9cb342] text-base leading-tight">Inscriptions</p>
                   </div>
-                  <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-x-auto">
-                    <p class="text-[10px] font-bold text-primary px-3 pt-3 pb-2 border-b border-gray-50">Dernières
-                      inscriptions</p>
-                    <table class="w-full min-w-[280px]">
-                      <thead>
-                        <tr class="text-[8px] font-bold text-gray-400 uppercase border-b border-gray-50">
-                          <td class="px-2 py-1.5">Date</td>
-                          <td class="px-2 py-1.5">Nom</td>
-                          <td class="px-2 py-1.5">Prénom</td>
-                          <td class="px-2 py-1.5">État</td>
-                        </tr>
-                      </thead>
-                      <tbody class="divide-y divide-gray-50">
-                        <tr class="text-[9px]">
-                          <td class="px-2 py-1.5 text-gray-400">13/04</td>
-                          <td class="px-2 py-1.5 font-semibold text-primary">DUPONT</td>
-                          <td class="px-2 py-1.5 text-gray-600">Marie</td>
-                          <td class="px-2 py-1.5"><span
-                              class="bg-[#c4d87d] text-primary font-bold text-[8px] px-1.5 py-0.5 rounded-full">Validé</span>
-                          </td>
-                        </tr>
-                        <tr class="text-[9px]">
-                          <td class="px-2 py-1.5 text-gray-400">12/04</td>
-                          <td class="px-2 py-1.5 font-semibold text-primary">LEROY</td>
-                          <td class="px-2 py-1.5 text-gray-600">Pierre</td>
-                          <td class="px-2 py-1.5"><span
-                              class="bg-primary text-white font-bold text-[8px] px-1.5 py-0.5 rounded-full">Annulé</span>
-                          </td>
-                        </tr>
-                        <tr class="text-[9px]">
-                          <td class="px-2 py-1.5 text-gray-400">12/04</td>
-                          <td class="px-2 py-1.5 font-semibold text-primary">MOREAU</td>
-                          <td class="px-2 py-1.5 text-gray-600">Sophie</td>
-                          <td class="px-2 py-1.5"><span
-                              class="bg-[#c4d87d] text-primary font-bold text-[8px] px-1.5 py-0.5 rounded-full">Validé</span>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                </div>
+                <i data-lucide="chevron-down"
+                  class="w-4 h-4 text-gray-400 flex-shrink-0 transition-transform duration-200"></i>
+              </button>
+              <div id="mob-ins" class="hidden px-5 pb-5 border-t border-gray-50">
+                <div class="pt-4">
+                  <p class="text-sm text-gray-600 leading-relaxed mb-4">Ouvrez vos inscriptions en quelques minutes.
+                    Profitez de fonctionnalités avancées pour adapter votre plateforme à vos besoins : personnalisation
+                    à
+                    vos couleurs, tarifs progressifs, app de retrait dossards, et bien plus encore.</p>
+                  <div class="space-y-2 mb-5">
+                    <div class="check-item"><i data-lucide="check-circle"
+                        class="w-4 h-4 text-[#9cb342] flex-shrink-0"></i>Formulaires personnalisables</div>
+                    <div class="check-item"><i data-lucide="check-circle"
+                        class="w-4 h-4 text-[#9cb342] flex-shrink-0"></i>Liste d'attente automatisées</div>
+                    <div class="check-item"><i data-lucide="check-circle"
+                        class="w-4 h-4 text-[#9cb342] flex-shrink-0"></i>Paiements sécurisés</div>
+                  </div>
+                  <div class="rounded-3xl border border-[#e8f3d0] bg-[#f7faf0] flex flex-col gap-3 p-4">
+                    <div class="grid grid-cols-2 gap-3">
+                      <div class="bg-white rounded-2xl p-3 shadow-sm border border-gray-100 flex flex-col gap-2">
+                        <div class="flex items-center gap-1.5"><i data-lucide="user"
+                            class="w-4 h-4 text-[#1e929b]"></i><span
+                            class="text-xl font-extrabold text-primary">107</span><span
+                            class="text-[10px] font-semibold text-gray-400">Inscrits</span></div>
+                        <div class="flex flex-col gap-1">
+                          <div class="flex justify-between text-[10px]"><span class="flex items-center gap-1"><span
+                                class="w-2 h-2 rounded-full bg-[#c4d87d]"></span>Validées</span><span
+                              class="font-bold text-primary">82</span></div>
+                          <div class="flex justify-between text-[10px]"><span class="flex items-center gap-1"><span
+                                class="w-2 h-2 rounded-full bg-[#6f6fad]"></span>A valider</span><span
+                              class="font-bold text-primary">0</span></div>
+                          <div class="flex justify-between text-[10px]"><span class="flex items-center gap-1"><span
+                                class="w-2 h-2 rounded-full bg-red-400"></span>Refusées</span><span
+                              class="font-bold text-primary">1</span></div>
+                          <div class="flex justify-between text-[10px]"><span class="flex items-center gap-1"><span
+                                class="w-2 h-2 rounded-full bg-gray-300"></span>Incomplètes</span><span
+                              class="font-bold text-primary">22</span></div>
+                        </div>
+                      </div>
+                      <div class="bg-white rounded-2xl p-3 shadow-sm border border-gray-100 flex flex-col gap-2">
+                        <div class="flex items-center gap-1.5"><i data-lucide="euro"
+                            class="w-4 h-4 text-[#1e929b]"></i><span class="text-xl font-extrabold text-primary">1
+                            412</span></div>
+                        <span class="text-[10px] font-semibold text-gray-400">Total collecté</span>
+                        <div class="border-t border-gray-50 pt-1.5 flex flex-col gap-1">
+                          <div class="flex justify-between text-[10px]"><span
+                              class="text-gray-400">Inscriptions</span><span class="font-semibold text-primary">1
+                              412€</span></div>
+                          <div class="flex justify-between text-[10px]"><span class="text-gray-400">Options</span><span
+                              class="font-semibold text-primary">0€</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-x-auto">
+                      <p class="text-[10px] font-bold text-primary px-3 pt-3 pb-2 border-b border-gray-50">Dernières
+                        inscriptions</p>
+                      <table class="w-full min-w-[280px]">
+                        <thead>
+                          <tr class="text-[8px] font-bold text-gray-400 uppercase border-b border-gray-50">
+                            <td class="px-2 py-1.5">Date</td>
+                            <td class="px-2 py-1.5">Nom</td>
+                            <td class="px-2 py-1.5">Prénom</td>
+                            <td class="px-2 py-1.5">État</td>
+                          </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-50">
+                          <tr class="text-[9px]">
+                            <td class="px-2 py-1.5 text-gray-400">13/04</td>
+                            <td class="px-2 py-1.5 font-semibold text-primary">DUPONT</td>
+                            <td class="px-2 py-1.5 text-gray-600">Marie</td>
+                            <td class="px-2 py-1.5"><span
+                                class="bg-[#c4d87d] text-primary font-bold text-[8px] px-1.5 py-0.5 rounded-full">Validé</span>
+                            </td>
+                          </tr>
+                          <tr class="text-[9px]">
+                            <td class="px-2 py-1.5 text-gray-400">12/04</td>
+                            <td class="px-2 py-1.5 font-semibold text-primary">LEROY</td>
+                            <td class="px-2 py-1.5 text-gray-600">Pierre</td>
+                            <td class="px-2 py-1.5"><span
+                                class="bg-primary text-white font-bold text-[8px] px-1.5 py-0.5 rounded-full">Annulé</span>
+                            </td>
+                          </tr>
+                          <tr class="text-[9px]">
+                            <td class="px-2 py-1.5 text-gray-400">12/04</td>
+                            <td class="px-2 py-1.5 font-semibold text-primary">MOREAU</td>
+                            <td class="px-2 py-1.5 text-gray-600">Sophie</td>
+                            <td class="px-2 py-1.5"><span
+                                class="bg-[#c4d87d] text-primary font-bold text-[8px] px-1.5 py-0.5 rounded-full">Validé</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Bénévoles -->
-          <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm">
-            <button onclick="toggleMobAccordion('mob-ben', this)"
-              class="w-full flex items-center justify-between px-5 py-4 text-left">
-              <div class="flex items-center gap-3">
-                <div class="flex-shrink-0"><img src="assets/img/icone%20benevole.webp" alt="" width="28" height="20"
-                    class="object-contain" /></div>
-                <div>
-                  <p class="text-[10px] font-bold uppercase tracking-widest text-[#6f6fad]">Module 02</p>
-                  <p class="font-bold text-[#6f6fad] text-base leading-tight">Bénévoles</p>
-                </div>
-              </div>
-              <i data-lucide="chevron-down"
-                class="w-4 h-4 text-gray-400 flex-shrink-0 transition-transform duration-200"></i>
-            </button>
-            <div id="mob-ben" class="hidden px-5 pb-5 border-t border-gray-50">
-              <div class="pt-4">
-                <p class="text-sm text-gray-600 leading-relaxed mb-4">Automatisez le recrutement, l'affectation et
-                  l'information à vos bénévoles.</p>
-                <div class="space-y-2 mb-5">
-                  <div class="check-item"><i data-lucide="check-circle"
-                      class="w-4 h-4 text-[#6f6fad] flex-shrink-0"></i>Formulaire de recrutement personnalisé</div>
-                  <div class="check-item"><i data-lucide="check-circle"
-                      class="w-4 h-4 text-[#6f6fad] flex-shrink-0"></i>Affectation</div>
-                  <div class="check-item"><i data-lucide="check-circle"
-                      class="w-4 h-4 text-[#6f6fad] flex-shrink-0"></i>Fiches missions générées automatiquement</div>
-                  <div class="check-item"><i data-lucide="check-circle"
-                      class="w-4 h-4 text-[#6f6fad] flex-shrink-0"></i>Cartographie avancée</div>
-                  <div class="check-item"><i data-lucide="check-circle"
-                      class="w-4 h-4 text-[#6f6fad] flex-shrink-0"></i>Gestion du matériel</div>
-                </div>
-                <div class="rounded-3xl p-3 border border-[#e8e8f4] bg-[#f7f7fb] flex flex-col gap-3">
-                  <div class="grid grid-cols-2 gap-3">
-                    <div class="bg-white rounded-2xl p-3 shadow-sm flex flex-col gap-1.5">
-                      <div class="flex items-center gap-1.5"><i data-lucide="users"
-                          class="w-4 h-4 text-[#1e929b]"></i><span class="text-xl font-bold text-primary">102</span>
-                      </div>
-                      <p class="text-[10px] font-semibold text-gray-500">Bénévoles</p>
-                      <div class="flex flex-col gap-0.5">
-                        <div class="flex justify-between text-[10px]"><span class="flex items-center gap-1"><span
-                              class="w-2 h-2 rounded-full bg-[#c4d87d]"></span>Affectés</span><span
-                            class="font-bold">3</span></div>
-                        <div class="flex justify-between text-[10px]"><span class="flex items-center gap-1"><span
-                              class="w-2 h-2 rounded-full bg-[#6f6fad]"></span>Non affectés</span><span
-                            class="font-bold">99</span></div>
-                      </div>
-                    </div>
-                    <div class="bg-white rounded-2xl p-3 shadow-sm flex flex-col gap-1.5">
-                      <div class="flex items-center gap-1.5"><i data-lucide="send"
-                          class="w-4 h-4 text-[#1e929b]"></i><span class="text-xl font-bold text-primary">3</span></div>
-                      <p class="text-[10px] font-semibold text-gray-500">À notifier</p>
-                      <div class="flex flex-col gap-0.5">
-                        <div class="flex justify-between text-[10px]"><span class="flex items-center gap-1"><i
-                              data-lucide="eye" class="w-3 h-3 text-[#1e929b]"></i>Consultée</span><span
-                            class="font-bold">0</span></div>
-                        <div class="flex justify-between text-[10px]"><span class="flex items-center gap-1"><i
-                              data-lucide="download" class="w-3 h-3 text-[#1e929b]"></i>Téléchargée</span><span
-                            class="font-bold">0</span></div>
-                      </div>
-                    </div>
+            <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm">
+              <button onclick="toggleMobAccordion('mob-ben', this)"
+                class="w-full flex items-center justify-between px-5 py-4 text-left">
+                <div class="flex items-center gap-3">
+                  <div class="flex-shrink-0"><img src="assets/img/icone%20benevole.webp" alt="" width="28" height="20"
+                      class="object-contain" /></div>
+                  <div>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-[#6f6fad]">Module 02</p>
+                    <p class="font-bold text-[#6f6fad] text-base leading-tight">Bénévoles</p>
                   </div>
-                  <div class="grid grid-cols-2 gap-3">
-                    <div class="bg-white rounded-2xl p-3 shadow-sm flex flex-col gap-1.5">
-                      <div class="flex items-center gap-1.5"><i data-lucide="crosshair"
-                          class="w-4 h-4 text-[#1e929b]"></i><span class="text-xl font-bold text-primary">117</span>
+                </div>
+                <i data-lucide="chevron-down"
+                  class="w-4 h-4 text-gray-400 flex-shrink-0 transition-transform duration-200"></i>
+              </button>
+              <div id="mob-ben" class="hidden px-5 pb-5 border-t border-gray-50">
+                <div class="pt-4">
+                  <p class="text-sm text-gray-600 leading-relaxed mb-4">Automatisez le recrutement, l'affectation et
+                    l'information à vos bénévoles.</p>
+                  <div class="space-y-2 mb-5">
+                    <div class="check-item"><i data-lucide="check-circle"
+                        class="w-4 h-4 text-[#6f6fad] flex-shrink-0"></i>Formulaire de recrutement personnalisé</div>
+                    <div class="check-item"><i data-lucide="check-circle"
+                        class="w-4 h-4 text-[#6f6fad] flex-shrink-0"></i>Affectation</div>
+                    <div class="check-item"><i data-lucide="check-circle"
+                        class="w-4 h-4 text-[#6f6fad] flex-shrink-0"></i>Fiches missions générées automatiquement</div>
+                    <div class="check-item"><i data-lucide="check-circle"
+                        class="w-4 h-4 text-[#6f6fad] flex-shrink-0"></i>Cartographie avancée</div>
+                    <div class="check-item"><i data-lucide="check-circle"
+                        class="w-4 h-4 text-[#6f6fad] flex-shrink-0"></i>Gestion du matériel</div>
+                  </div>
+                  <div class="rounded-3xl p-3 border border-[#e8e8f4] bg-[#f7f7fb] flex flex-col gap-3">
+                    <div class="grid grid-cols-2 gap-3">
+                      <div class="bg-white rounded-2xl p-3 shadow-sm flex flex-col gap-1.5">
+                        <div class="flex items-center gap-1.5"><i data-lucide="users"
+                            class="w-4 h-4 text-[#1e929b]"></i><span class="text-xl font-bold text-primary">102</span>
+                        </div>
+                        <p class="text-[10px] font-semibold text-gray-500">Bénévoles</p>
+                        <div class="flex flex-col gap-0.5">
+                          <div class="flex justify-between text-[10px]"><span class="flex items-center gap-1"><span
+                                class="w-2 h-2 rounded-full bg-[#c4d87d]"></span>Affectés</span><span
+                              class="font-bold">3</span></div>
+                          <div class="flex justify-between text-[10px]"><span class="flex items-center gap-1"><span
+                                class="w-2 h-2 rounded-full bg-[#6f6fad]"></span>Non affectés</span><span
+                              class="font-bold">99</span></div>
+                        </div>
                       </div>
-                      <p class="text-[10px] font-semibold text-gray-500">Missions</p>
-                      <div class="flex flex-col gap-0.5">
-                        <div class="flex justify-between text-[10px]"><span>Créneaux</span><span
-                            class="font-bold">117</span></div>
-                        <div class="flex justify-between text-[10px]"><span>Temps total</span><span
-                            class="font-bold">1213h</span></div>
+                      <div class="bg-white rounded-2xl p-3 shadow-sm flex flex-col gap-1.5">
+                        <div class="flex items-center gap-1.5"><i data-lucide="send"
+                            class="w-4 h-4 text-[#1e929b]"></i><span class="text-xl font-bold text-primary">3</span>
+                        </div>
+                        <p class="text-[10px] font-semibold text-gray-500">À notifier</p>
+                        <div class="flex flex-col gap-0.5">
+                          <div class="flex justify-between text-[10px]"><span class="flex items-center gap-1"><i
+                                data-lucide="eye" class="w-3 h-3 text-[#1e929b]"></i>Consultée</span><span
+                              class="font-bold">0</span></div>
+                          <div class="flex justify-between text-[10px]"><span class="flex items-center gap-1"><i
+                                data-lucide="download" class="w-3 h-3 text-[#1e929b]"></i>Téléchargée</span><span
+                              class="font-bold">0</span></div>
+                        </div>
                       </div>
                     </div>
-                    <div class="bg-white rounded-2xl p-3 shadow-sm flex flex-col gap-1.5">
-                      <div class="flex items-center gap-1.5"><i data-lucide="layout-list"
-                          class="w-4 h-4 text-[#1e929b]"></i><span class="text-xl font-bold text-primary">1</span></div>
-                      <p class="text-[10px] font-semibold text-gray-500">Candidature</p>
-                      <div class="flex flex-col gap-0.5">
-                        <div class="flex justify-between text-[10px]"><span>Validée</span><span
-                            class="font-bold">1</span></div>
-                        <div class="flex justify-between text-[10px]"><span>En attente</span><span
-                            class="font-bold">0</span></div>
+                    <div class="grid grid-cols-2 gap-3">
+                      <div class="bg-white rounded-2xl p-3 shadow-sm flex flex-col gap-1.5">
+                        <div class="flex items-center gap-1.5"><i data-lucide="crosshair"
+                            class="w-4 h-4 text-[#1e929b]"></i><span class="text-xl font-bold text-primary">117</span>
+                        </div>
+                        <p class="text-[10px] font-semibold text-gray-500">Missions</p>
+                        <div class="flex flex-col gap-0.5">
+                          <div class="flex justify-between text-[10px]"><span>Créneaux</span><span
+                              class="font-bold">117</span></div>
+                          <div class="flex justify-between text-[10px]"><span>Temps total</span><span
+                              class="font-bold">1213h</span></div>
+                        </div>
+                      </div>
+                      <div class="bg-white rounded-2xl p-3 shadow-sm flex flex-col gap-1.5">
+                        <div class="flex items-center gap-1.5"><i data-lucide="layout-list"
+                            class="w-4 h-4 text-[#1e929b]"></i><span class="text-xl font-bold text-primary">1</span>
+                        </div>
+                        <p class="text-[10px] font-semibold text-gray-500">Candidature</p>
+                        <div class="flex flex-col gap-0.5">
+                          <div class="flex justify-between text-[10px]"><span>Validée</span><span
+                              class="font-bold">1</span></div>
+                          <div class="flex justify-between text-[10px]"><span>En attente</span><span
+                              class="font-bold">0</span></div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Communication -->
-          <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm">
-            <button onclick="toggleMobAccordion('mob-com', this)"
-              class="w-full flex items-center justify-between px-5 py-4 text-left">
-              <div class="flex items-center gap-3">
-                <div class="flex-shrink-0"><img src="assets/img/icone%20communication.webp" alt="" width="28"
-                    height="20" class="object-contain" /></div>
-                <div>
-                  <p class="text-[10px] font-bold uppercase tracking-widest text-[#1e929b]">Module 03</p>
-                  <p class="font-bold text-[#1e929b] text-base leading-tight">Communication</p>
-                </div>
-              </div>
-              <i data-lucide="chevron-down"
-                class="w-4 h-4 text-gray-400 flex-shrink-0 transition-transform duration-200"></i>
-            </button>
-            <div id="mob-com" class="hidden px-5 pb-5 border-t border-gray-50">
-              <div class="pt-4">
-                <p class="text-sm text-gray-600 leading-relaxed mb-4">Créez des emailing personnalisés avec des
-                  templates aux couleurs de votre événement. Centralisez vos envois en sélectionnant vos destinataires :
-                  inscrits, bénévoles ou listes personnalisées.</p>
-                <div class="space-y-2 mb-5">
-                  <div class="check-item"><i data-lucide="check-circle"
-                      class="w-4 h-4 text-[#1e929b] flex-shrink-0"></i>Éditeur graphique intuitif</div>
-                  <div class="check-item"><i data-lucide="check-circle"
-                      class="w-4 h-4 text-[#1e929b] flex-shrink-0"></i>Envois programmés</div>
-                  <div class="check-item"><i data-lucide="check-circle"
-                      class="w-4 h-4 text-[#1e929b] flex-shrink-0"></i>Suivi des ouvertures / clics</div>
-                </div>
-                <div class="rounded-3xl border border-[#d0eef0] bg-[#f4fafb] overflow-hidden">
-                  <div class="flex items-center gap-1 px-4 py-3 border-b border-[#d0eef0] bg-white flex-wrap gap-y-1.5">
-                    <div class="flex items-center gap-1 text-[9px] font-bold text-[#1e929b]"><span
-                        class="w-4 h-4 rounded-full bg-[#c4d87d] flex items-center justify-center text-primary text-[8px]">✓</span>Campagne
-                    </div>
-                    <div class="w-3 h-px bg-gray-200 mx-0.5"></div>
-                    <div class="flex items-center gap-1 text-[9px] font-bold text-primary"><span
-                        class="w-4 h-4 rounded-full bg-[#c4d87d] flex items-center justify-center text-primary text-[8px] font-bold">2</span>Contenu
-                    </div>
-                    <div class="w-3 h-px bg-gray-200 mx-0.5"></div>
-                    <div class="flex items-center gap-1 text-[9px] text-gray-400"><span
-                        class="w-4 h-4 rounded-full bg-gray-100 flex items-center justify-center text-[8px]">3</span>Destinataires
-                    </div>
-                    <div class="w-3 h-px bg-gray-200 mx-0.5"></div>
-                    <div class="flex items-center gap-1 text-[9px] text-gray-400"><span
-                        class="w-4 h-4 rounded-full bg-gray-100 flex items-center justify-center text-[8px]">4</span>Envoi
-                    </div>
+            <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm">
+              <button onclick="toggleMobAccordion('mob-com', this)"
+                class="w-full flex items-center justify-between px-5 py-4 text-left">
+                <div class="flex items-center gap-3">
+                  <div class="flex-shrink-0"><img src="assets/img/icone%20communication.webp" alt="" width="28"
+                      height="20" class="object-contain" /></div>
+                  <div>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-[#1e929b]">Module 03</p>
+                    <p class="font-bold text-[#1e929b] text-base leading-tight">Communication</p>
                   </div>
-                  <div class="p-3">
-                    <div class="bg-white rounded-lg border border-gray-100 shadow-sm overflow-hidden">
-                      <div class="bg-[#231a3d] px-3 py-2.5 flex flex-col items-center gap-1.5">
-                        <div class="flex items-center gap-1.5">
+                </div>
+                <i data-lucide="chevron-down"
+                  class="w-4 h-4 text-gray-400 flex-shrink-0 transition-transform duration-200"></i>
+              </button>
+              <div id="mob-com" class="hidden px-5 pb-5 border-t border-gray-50">
+                <div class="pt-4">
+                  <p class="text-sm text-gray-600 leading-relaxed mb-4">Créez des emailing personnalisés avec des
+                    templates aux couleurs de votre événement. Centralisez vos envois en sélectionnant vos destinataires
+                    :
+                    inscrits, bénévoles ou listes personnalisées.</p>
+                  <div class="space-y-2 mb-5">
+                    <div class="check-item"><i data-lucide="check-circle"
+                        class="w-4 h-4 text-[#1e929b] flex-shrink-0"></i>Éditeur graphique intuitif</div>
+                    <div class="check-item"><i data-lucide="check-circle"
+                        class="w-4 h-4 text-[#1e929b] flex-shrink-0"></i>Envois programmés</div>
+                    <div class="check-item"><i data-lucide="check-circle"
+                        class="w-4 h-4 text-[#1e929b] flex-shrink-0"></i>Suivi des ouvertures / clics</div>
+                  </div>
+                  <div class="rounded-3xl border border-[#d0eef0] bg-[#f4fafb] overflow-hidden">
+                    <div
+                      class="flex items-center gap-1 px-4 py-3 border-b border-[#d0eef0] bg-white flex-wrap gap-y-1.5">
+                      <div class="flex items-center gap-1 text-[9px] font-bold text-[#1e929b]"><span
+                          class="w-4 h-4 rounded-full bg-[#c4d87d] flex items-center justify-center text-primary text-[8px]">✓</span>Campagne
+                      </div>
+                      <div class="w-3 h-px bg-gray-200 mx-0.5"></div>
+                      <div class="flex items-center gap-1 text-[9px] font-bold text-primary"><span
+                          class="w-4 h-4 rounded-full bg-[#c4d87d] flex items-center justify-center text-primary text-[8px] font-bold">2</span>Contenu
+                      </div>
+                      <div class="w-3 h-px bg-gray-200 mx-0.5"></div>
+                      <div class="flex items-center gap-1 text-[9px] text-gray-400"><span
+                          class="w-4 h-4 rounded-full bg-gray-100 flex items-center justify-center text-[8px]">3</span>Destinataires
+                      </div>
+                      <div class="w-3 h-px bg-gray-200 mx-0.5"></div>
+                      <div class="flex items-center gap-1 text-[9px] text-gray-400"><span
+                          class="w-4 h-4 rounded-full bg-gray-100 flex items-center justify-center text-[8px]">4</span>Envoi
+                      </div>
+                    </div>
+                    <div class="p-3">
+                      <div class="bg-white rounded-lg border border-gray-100 shadow-sm overflow-hidden">
+                        <div class="bg-[#231a3d] px-3 py-2.5 flex flex-col items-center gap-1.5">
+                          <div class="flex items-center gap-1.5">
+                            <div
+                              class="w-4 h-4 bg-[#c4d87d] rounded-sm flex items-center justify-center text-primary font-bold text-[8px]">
+                              S</div><span class="text-white font-bold text-[10px] tracking-tight">strayde</span>
+                          </div>
+                          <div class="flex gap-3 mt-0.5">
+                            <div class="flex flex-col items-center gap-0.5 opacity-80">
+                              <div class="w-3 h-3 bg-[#30b7c0] rounded-sm"></div><span
+                                class="text-[6px] text-[#c4d87d] font-bold uppercase">Admin</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-0.5 opacity-80">
+                              <div class="w-3 h-3 bg-[#c4d87d] rounded-sm"></div><span
+                                class="text-[6px] text-[#c4d87d] font-bold uppercase">Inscrip.</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-0.5 opacity-80">
+                              <div class="w-3 h-3 bg-[#6f6fad] rounded-sm"></div><span
+                                class="text-[6px] text-[#c4d87d] font-bold uppercase">Bénév.</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-0.5 opacity-80">
+                              <div class="w-3 h-3 bg-[#1e929b] rounded-sm"></div><span
+                                class="text-[6px] text-[#c4d87d] font-bold uppercase">Comm.</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="px-3 py-2 flex flex-col gap-1.5">
+                          <p class="text-[9px] font-bold text-primary">Hey {prenom}, Strayde vous simplifie encore plus
+                            l'organisation !</p>
+                          <p class="text-[8px] text-gray-400 leading-tight">Découvrez les nouveautés de votre
+                            plateforme...</p>
+                          <div class="h-1 bg-gray-100 rounded w-full"></div>
+                          <div class="h-1 bg-gray-100 rounded w-4/5"></div>
                           <div
-                            class="w-4 h-4 bg-[#c4d87d] rounded-sm flex items-center justify-center text-primary font-bold text-[8px]">
-                            S</div><span class="text-white font-bold text-[10px] tracking-tight">strayde</span>
+                            class="mt-1 h-5 bg-[#1e929b] rounded flex items-center justify-center text-[7px] font-bold text-white">
+                            Accéder à ma plateforme</div>
                         </div>
-                        <div class="flex gap-3 mt-0.5">
-                          <div class="flex flex-col items-center gap-0.5 opacity-80">
-                            <div class="w-3 h-3 bg-[#30b7c0] rounded-sm"></div><span
-                              class="text-[6px] text-[#c4d87d] font-bold uppercase">Admin</span>
-                          </div>
-                          <div class="flex flex-col items-center gap-0.5 opacity-80">
-                            <div class="w-3 h-3 bg-[#c4d87d] rounded-sm"></div><span
-                              class="text-[6px] text-[#c4d87d] font-bold uppercase">Inscrip.</span>
-                          </div>
-                          <div class="flex flex-col items-center gap-0.5 opacity-80">
-                            <div class="w-3 h-3 bg-[#6f6fad] rounded-sm"></div><span
-                              class="text-[6px] text-[#c4d87d] font-bold uppercase">Bénév.</span>
-                          </div>
-                          <div class="flex flex-col items-center gap-0.5 opacity-80">
-                            <div class="w-3 h-3 bg-[#1e929b] rounded-sm"></div><span
-                              class="text-[6px] text-[#c4d87d] font-bold uppercase">Comm.</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="px-3 py-2 flex flex-col gap-1.5">
-                        <p class="text-[9px] font-bold text-primary">Hey {prenom}, Strayde vous simplifie encore plus
-                          l'organisation !</p>
-                        <p class="text-[8px] text-gray-400 leading-tight">Découvrez les nouveautés de votre
-                          plateforme...</p>
-                        <div class="h-1 bg-gray-100 rounded w-full"></div>
-                        <div class="h-1 bg-gray-100 rounded w-4/5"></div>
-                        <div
-                          class="mt-1 h-5 bg-[#1e929b] rounded flex items-center justify-center text-[7px] font-bold text-white">
-                          Accéder à ma plateforme</div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Administratif -->
-          <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm">
-            <button onclick="toggleMobAccordion('mob-adm', this)"
-              class="w-full flex items-center justify-between px-5 py-4 text-left">
-              <div class="flex items-center gap-3">
-                <div class="flex-shrink-0"><img src="assets/img/icone%20administratif.webp" alt="" width="28"
-                    height="20" class="object-contain" /></div>
-                <div>
-                  <p class="text-[10px] font-bold uppercase tracking-widest text-[#30b7c0]">Module 04</p>
-                  <p class="font-bold text-[#30b7c0] text-base leading-tight">Administratif</p>
-                </div>
-              </div>
-              <i data-lucide="chevron-down"
-                class="w-4 h-4 text-gray-400 flex-shrink-0 transition-transform duration-200"></i>
-            </button>
-            <div id="mob-adm" class="hidden px-5 pb-5 border-t border-gray-50">
-              <div class="pt-4">
-                <p class="text-sm text-gray-600 leading-relaxed mb-4">Suivez le planning d'obligations réglementaires
-                  généré automatiquement, stockez vos documents, planifiez vos tâches pour une organisation optimisée.
-                </p>
-                <div class="space-y-2 mb-5">
-                  <div class="check-item"><i data-lucide="check-circle"
-                      class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Génération automatique de documents</div>
-                  <div class="check-item"><i data-lucide="check-circle"
-                      class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Planning prégénéré selon votre type
-                    d'organisation</div>
-                  <div class="check-item"><i data-lucide="check-circle"
-                      class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Gestion de tâches</div>
-                  <div class="check-item"><i data-lucide="check-circle"
-                      class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Stockage de vos fichiers</div>
-                </div>
-                <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden p-4">
-                  <div class="relative">
-                    <div class="grid grid-cols-3 gap-x-3 mb-0">
-                      <div class="flex flex-col items-start gap-1.5 relative">
-                        <div
-                          class="absolute left-[calc(50%-0.5px)] top-0 bottom-6 border-l border-dashed border-[#c4d87d]">
-                        </div>
-                        <div
-                          class="relative z-10 w-full bg-white border border-[#c4d87d] rounded-lg px-2 py-1.5 flex items-center gap-1">
-                          <i data-lucide="clock" class="w-3 h-3 text-gray-400 flex-shrink-0"></i>
-                          <div>
-                            <p class="text-[9px] font-semibold text-primary leading-tight">Cartographie</p>
-                            <p class="text-[8px] text-gray-400">11/02</p>
-                          </div>
-                        </div>
-                        <div
-                          class="relative z-10 w-full bg-white border border-[#c4d87d] rounded-lg px-2 py-1.5 flex items-center gap-1">
-                          <i data-lucide="clock" class="w-3 h-3 text-gray-400 flex-shrink-0"></i>
-                          <div>
-                            <p class="text-[9px] font-semibold text-primary leading-tight">Règlement</p>
-                            <p class="text-[8px] text-gray-400">11/02</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="flex flex-col items-start justify-end gap-1.5 relative">
-                        <div
-                          class="absolute left-[calc(50%-0.5px)] top-0 bottom-6 border-l border-dashed border-[#c4d87d]">
-                        </div>
-                        <div
-                          class="relative z-10 w-full bg-white border border-[#c4d87d] rounded-lg px-2 py-1.5 flex items-center gap-1">
-                          <i data-lucide="clock" class="w-3 h-3 text-gray-400 flex-shrink-0"></i>
-                          <div>
-                            <p class="text-[9px] font-semibold text-primary leading-tight">Signaleurs</p>
-                            <p class="text-[8px] text-gray-400">22/03</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="flex flex-col items-start justify-end gap-1.5 relative">
-                        <div
-                          class="absolute left-[calc(50%-0.5px)] top-0 bottom-6 border-l border-dashed border-[#c4d87d]">
-                        </div>
-                        <div
-                          class="relative z-10 w-full bg-white border border-[#c4d87d] rounded-lg px-2 py-1.5 flex items-center gap-1">
-                          <i data-lucide="clock" class="w-3 h-3 text-gray-400 flex-shrink-0"></i>
-                          <div>
-                            <p class="text-[9px] font-semibold text-primary leading-tight">Assurance</p>
-                            <p class="text-[8px] text-gray-400">06/04</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="relative mt-1 h-5">
-                      <div class="absolute top-2 left-0 right-0 h-px bg-gray-200"></div>
-                      <div
-                        class="absolute top-[3px] left-[calc(16.6%-5px)] w-[10px] h-[10px] rounded-full bg-[#c4d87d] border-2 border-white shadow-sm z-10">
-                      </div>
-                      <div
-                        class="absolute top-[3px] left-[calc(50%-5px)] w-[10px] h-[10px] rounded-full bg-[#c4d87d] border-2 border-white shadow-sm z-10">
-                      </div>
-                      <div
-                        class="absolute top-[3px] left-[calc(83.3%-5px)] w-[10px] h-[10px] rounded-full bg-[#c4d87d] border-2 border-white shadow-sm z-10">
-                      </div>
-                    </div>
-                    <div class="grid grid-cols-3 mt-1">
-                      <p class="text-[8px] font-bold text-gray-400">FÉVR.</p>
-                      <p class="text-[8px] font-bold text-gray-400">MARS</p>
-                      <p class="text-[8px] font-bold text-gray-400">AVR.</p>
-                    </div>
+            <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm">
+              <button onclick="toggleMobAccordion('mob-adm', this)"
+                class="w-full flex items-center justify-between px-5 py-4 text-left">
+                <div class="flex items-center gap-3">
+                  <div class="flex-shrink-0"><img src="assets/img/icone%20administratif.webp" alt="" width="28"
+                      height="20" class="object-contain" /></div>
+                  <div>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-[#30b7c0]">Module 04</p>
+                    <p class="font-bold text-[#30b7c0] text-base leading-tight">Administratif</p>
                   </div>
-                  <div class="mt-3 border-t border-gray-50 pt-3">
-                    <p class="text-[9px] font-bold text-primary uppercase tracking-widest mb-2">7 tâches en attente</p>
-                    <div class="flex flex-col divide-y divide-dashed divide-gray-100">
-                      <div class="flex justify-between items-center py-1.5">
-                        <div>
-                          <p class="text-[10px] font-semibold text-primary">Cartographie</p>
-                          <p class="text-[8px] text-gray-400">11/02/2026</p>
-                        </div><span class="text-[8px] font-semibold text-gray-400 bg-gray-100 px-2 py-0.5 rounded-lg">À
-                          faire</span>
+                </div>
+                <i data-lucide="chevron-down"
+                  class="w-4 h-4 text-gray-400 flex-shrink-0 transition-transform duration-200"></i>
+              </button>
+              <div id="mob-adm" class="hidden px-5 pb-5 border-t border-gray-50">
+                <div class="pt-4">
+                  <p class="text-sm text-gray-600 leading-relaxed mb-4">Suivez le planning d'obligations réglementaires
+                    généré automatiquement, stockez vos documents, planifiez vos tâches pour une organisation optimisée.
+                  </p>
+                  <div class="space-y-2 mb-5">
+                    <div class="check-item"><i data-lucide="check-circle"
+                        class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Génération automatique de documents</div>
+                    <div class="check-item"><i data-lucide="check-circle"
+                        class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Planning prégénéré selon votre type
+                      d'organisation</div>
+                    <div class="check-item"><i data-lucide="check-circle"
+                        class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Gestion de tâches</div>
+                    <div class="check-item"><i data-lucide="check-circle"
+                        class="w-4 h-4 text-[#30b7c0] flex-shrink-0"></i>Stockage de vos fichiers</div>
+                  </div>
+                  <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden p-4">
+                    <div class="relative">
+                      <div class="grid grid-cols-3 gap-x-3 mb-0">
+                        <div class="flex flex-col items-start gap-1.5 relative">
+                          <div
+                            class="absolute left-[calc(50%-0.5px)] top-0 bottom-6 border-l border-dashed border-[#c4d87d]">
+                          </div>
+                          <div
+                            class="relative z-10 w-full bg-white border border-[#c4d87d] rounded-lg px-2 py-1.5 flex items-center gap-1">
+                            <i data-lucide="clock" class="w-3 h-3 text-gray-400 flex-shrink-0"></i>
+                            <div>
+                              <p class="text-[9px] font-semibold text-primary leading-tight">Cartographie</p>
+                              <p class="text-[8px] text-gray-400">11/02</p>
+                            </div>
+                          </div>
+                          <div
+                            class="relative z-10 w-full bg-white border border-[#c4d87d] rounded-lg px-2 py-1.5 flex items-center gap-1">
+                            <i data-lucide="clock" class="w-3 h-3 text-gray-400 flex-shrink-0"></i>
+                            <div>
+                              <p class="text-[9px] font-semibold text-primary leading-tight">Règlement</p>
+                              <p class="text-[8px] text-gray-400">11/02</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flex flex-col items-start justify-end gap-1.5 relative">
+                          <div
+                            class="absolute left-[calc(50%-0.5px)] top-0 bottom-6 border-l border-dashed border-[#c4d87d]">
+                          </div>
+                          <div
+                            class="relative z-10 w-full bg-white border border-[#c4d87d] rounded-lg px-2 py-1.5 flex items-center gap-1">
+                            <i data-lucide="clock" class="w-3 h-3 text-gray-400 flex-shrink-0"></i>
+                            <div>
+                              <p class="text-[9px] font-semibold text-primary leading-tight">Signaleurs</p>
+                              <p class="text-[8px] text-gray-400">22/03</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flex flex-col items-start justify-end gap-1.5 relative">
+                          <div
+                            class="absolute left-[calc(50%-0.5px)] top-0 bottom-6 border-l border-dashed border-[#c4d87d]">
+                          </div>
+                          <div
+                            class="relative z-10 w-full bg-white border border-[#c4d87d] rounded-lg px-2 py-1.5 flex items-center gap-1">
+                            <i data-lucide="clock" class="w-3 h-3 text-gray-400 flex-shrink-0"></i>
+                            <div>
+                              <p class="text-[9px] font-semibold text-primary leading-tight">Assurance</p>
+                              <p class="text-[8px] text-gray-400">06/04</p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="flex justify-between items-center py-1.5">
-                        <div>
-                          <p class="text-[10px] font-semibold text-primary">Itinéraire horaire</p>
-                          <p class="text-[8px] text-gray-400">11/02/2026</p>
-                        </div><span class="text-[8px] font-semibold text-gray-400 bg-gray-100 px-2 py-0.5 rounded-lg">À
-                          faire</span>
+                      <div class="relative mt-1 h-5">
+                        <div class="absolute top-2 left-0 right-0 h-px bg-gray-200"></div>
+                        <div
+                          class="absolute top-[3px] left-[calc(16.6%-5px)] w-[10px] h-[10px] rounded-full bg-[#c4d87d] border-2 border-white shadow-sm z-10">
+                        </div>
+                        <div
+                          class="absolute top-[3px] left-[calc(50%-5px)] w-[10px] h-[10px] rounded-full bg-[#c4d87d] border-2 border-white shadow-sm z-10">
+                        </div>
+                        <div
+                          class="absolute top-[3px] left-[calc(83.3%-5px)] w-[10px] h-[10px] rounded-full bg-[#c4d87d] border-2 border-white shadow-sm z-10">
+                        </div>
                       </div>
-                      <div class="flex justify-between items-center py-1.5">
-                        <div>
-                          <p class="text-[10px] font-semibold text-primary">Règlement</p>
-                          <p class="text-[8px] text-gray-400">11/02/2026</p>
-                        </div><span class="text-[8px] font-semibold text-gray-400 bg-gray-100 px-2 py-0.5 rounded-lg">À
-                          faire</span>
+                      <div class="grid grid-cols-3 mt-1">
+                        <p class="text-[8px] font-bold text-gray-400">FÉVR.</p>
+                        <p class="text-[8px] font-bold text-gray-400">MARS</p>
+                        <p class="text-[8px] font-bold text-gray-400">AVR.</p>
+                      </div>
+                    </div>
+                    <div class="mt-3 border-t border-gray-50 pt-3">
+                      <p class="text-[9px] font-bold text-primary uppercase tracking-widest mb-2">7 tâches en attente
+                      </p>
+                      <div class="flex flex-col divide-y divide-dashed divide-gray-100">
+                        <div class="flex justify-between items-center py-1.5">
+                          <div>
+                            <p class="text-[10px] font-semibold text-primary">Cartographie</p>
+                            <p class="text-[8px] text-gray-400">11/02/2026</p>
+                          </div><span
+                            class="text-[8px] font-semibold text-gray-400 bg-gray-100 px-2 py-0.5 rounded-lg">À
+                            faire</span>
+                        </div>
+                        <div class="flex justify-between items-center py-1.5">
+                          <div>
+                            <p class="text-[10px] font-semibold text-primary">Itinéraire horaire</p>
+                            <p class="text-[8px] text-gray-400">11/02/2026</p>
+                          </div><span
+                            class="text-[8px] font-semibold text-gray-400 bg-gray-100 px-2 py-0.5 rounded-lg">À
+                            faire</span>
+                        </div>
+                        <div class="flex justify-between items-center py-1.5">
+                          <div>
+                            <p class="text-[10px] font-semibold text-primary">Règlement</p>
+                            <p class="text-[8px] text-gray-400">11/02/2026</p>
+                          </div><span
+                            class="text-[8px] font-semibold text-gray-400 bg-gray-100 px-2 py-0.5 rounded-lg">À
+                            faire</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
 
         </div>
-        <script>
-          function toggleMobAccordion(id, btn) {
-            var body = document.getElementById(id);
-            var chevron = btn.querySelector('[data-lucide="chevron-down"]');
-            if (body.classList.contains('hidden')) {
-              body.classList.remove('hidden');
-              if (chevron) chevron.style.transform = 'rotate(180deg)';
-            } else {
-              body.classList.add('hidden');
-              if (chevron) chevron.style.transform = '';
-            }
-            if (window.lucide) lucide.createIcons();
-          }
-        </script>
 
         <div class="text-center mt-8 md:mt-16 reveal">
           <a href="#contact"
@@ -1472,7 +1397,6 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════ PROFILS ══════════════════════════ -->
     <section id="profils" class="py-12 md:py-20 s-dark">
       <div class="max-w-6xl mx-auto px-5">
         <div class="text-center mb-14 reveal">
@@ -1524,7 +1448,6 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════ APPROCHE ══════════════════════════ -->
     <section id="approche" class="py-12 md:py-24 bg-gray-50 border-t border-gray-100">
       <div class="max-w-6xl mx-auto px-5">
 
@@ -1539,10 +1462,8 @@
           </p>
         </div>
 
-        <!-- The 3 Cards -->
         <div class="grid md:grid-cols-3 gap-5 reveal">
 
-          <!-- Card 1 -->
           <div class="bg-primary rounded-2xl px-6 py-5 flex flex-col shadow-md hover:shadow-xl transition-shadow">
             <div class="flex items-center gap-3 mb-3">
               <i data-lucide="leaf" class="w-5 h-5 text-white flex-shrink-0"></i>
@@ -1552,7 +1473,6 @@
               énergétique, propulsée par des serveurs haute performance exclusivement situés en France.</p>
           </div>
 
-          <!-- Card 2 -->
           <div class="bg-accent rounded-2xl px-6 py-5 flex flex-col shadow-md hover:shadow-xl transition-shadow">
             <div class="flex items-center gap-3 mb-3">
               <i data-lucide="heart" class="w-5 h-5 text-primary flex-shrink-0"></i>
@@ -1562,7 +1482,6 @@
               nos modules de dons intégrés pour soutenir les causes qui vous tiennent à cœur.</p>
           </div>
 
-          <!-- Card 3 -->
           <div class="bg-[#d2f0f4] rounded-2xl px-6 py-5 flex flex-col shadow-md hover:shadow-xl transition-shadow">
             <div class="flex items-center gap-3 mb-3">
               <i data-lucide="shield-check" class="w-5 h-5 text-primary flex-shrink-0"></i>
@@ -1577,7 +1496,6 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════ CONFIANCE ══════════════════════════ -->
     <section class="py-12 md:py-20 s-darker relative overflow-hidden">
       <div class="max-w-7xl mx-auto px-5">
         <div class="text-center mb-12 reveal">
@@ -1587,11 +1505,8 @@
           <p class="text-white-40 text-[0.95rem]">Des organisations de toutes tailles, partout en France</p>
         </div>
 
-        <!-- Carousel Container -->
         <div class="relative group">
           <div id="race-carousel" class="race-carousel reveal">
-            <!-- Courses -->
-
             <div class="race-card px-4 py-2 select-none">
               <img src="assets/img/logo%20ecrain%20trail.webp" alt="Grand Trail des Écrins" draggable="false"
                 class="h-20 md:h-28 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300">
@@ -1626,7 +1541,6 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════ FAQ ══════════════════════════ -->
     <section id="faq" class="py-12 md:py-24 bg-white">
       <div class="max-w-3xl mx-auto px-5">
         <div class="text-center mb-14 reveal">
@@ -1703,7 +1617,6 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════ AVIS ══════════════════════════ -->
     <section class="py-12 md:py-20 bg-[#f4fbe5]">
       <div class="max-w-5xl mx-auto px-5">
         <div class="text-center mb-10 reveal">
@@ -1719,11 +1632,9 @@
           </a>
         </div>
 
-        <!-- Carousel avis -->
         <div class="relative reveal" id="reviews-wrapper">
           <div id="reviews-carousel" class="race-carousel">
 
-            <!-- Avis 1 -->
             <div class="race-card w-80 flex-shrink-0 select-none px-2">
               <div class="card rounded-2xl p-5 flex flex-col gap-3 h-full">
                 <div class="flex gap-1 justify-center">
@@ -1744,7 +1655,6 @@
               </div>
             </div>
 
-            <!-- Avis 2 -->
             <div class="race-card w-80 flex-shrink-0 select-none px-2">
               <div class="card rounded-2xl p-5 flex flex-col gap-3 h-full">
                 <div class="flex gap-1 justify-center">
@@ -1764,7 +1674,6 @@
               </div>
             </div>
 
-            <!-- Avis 3 -->
             <div class="race-card w-80 flex-shrink-0 select-none px-2">
               <div class="card rounded-2xl p-5 flex flex-col gap-3 h-full">
                 <div class="flex gap-1 justify-center">
@@ -1785,7 +1694,6 @@
               </div>
             </div>
 
-            <!-- Avis 4 -->
             <div class="race-card w-80 flex-shrink-0 select-none px-2">
               <div class="card rounded-2xl p-5 flex flex-col gap-3 h-full">
                 <div class="flex gap-1 justify-center">
@@ -1806,7 +1714,6 @@
               </div>
             </div>
 
-            <!-- Avis 5 -->
             <div class="race-card w-80 flex-shrink-0 select-none px-2">
               <div class="card rounded-2xl p-5 flex flex-col gap-3 h-full">
                 <div class="flex gap-1 justify-center">
@@ -1827,7 +1734,6 @@
               </div>
             </div>
 
-            <!-- Avis 6 -->
             <div class="race-card w-80 flex-shrink-0 select-none px-2">
               <div class="card rounded-2xl p-5 flex flex-col gap-3 h-full">
                 <div class="flex gap-1 justify-center">
@@ -1848,7 +1754,6 @@
               </div>
             </div>
 
-            <!-- Avis 7 -->
             <div class="race-card w-80 flex-shrink-0 select-none px-2">
               <div class="card rounded-2xl p-5 flex flex-col gap-3 h-full">
                 <div class="flex gap-1 justify-center">
@@ -1872,49 +1777,7 @@
         </div>
       </div>
     </section>
-    <script>
-      (function () {
-        var rc = document.getElementById('reviews-carousel');
-        if (!rc) return;
-        var isDown = false, startX, scrollLeft, paused = false, speed = 0.6;
-        rc.addEventListener('mousedown', function (e) {
-          isDown = true; paused = true;
-          rc.style.scrollBehavior = 'auto';
-          rc.style.scrollSnapType = 'none';
-          rc.classList.add('active');
-          startX = e.pageX - rc.offsetLeft;
-          scrollLeft = rc.scrollLeft;
-        });
-        rc.addEventListener('mouseleave', function () {
-          if (isDown) { isDown = false; rc.style.scrollSnapType = 'x mandatory'; rc.style.scrollBehavior = 'smooth'; }
-          paused = false;
-        });
-        rc.addEventListener('mouseup', function () {
-          isDown = false;
-          rc.style.scrollSnapType = 'x mandatory';
-          rc.style.scrollBehavior = 'smooth';
-          setTimeout(function () { paused = false; }, 1200);
-        });
-        rc.addEventListener('mousemove', function (e) {
-          if (!isDown) return;
-          e.preventDefault();
-          rc.scrollLeft = scrollLeft - (e.pageX - rc.offsetLeft - startX);
-        });
-        rc.addEventListener('mouseenter', function () { if (!isDown) paused = true; });
-        rc.addEventListener('touchstart', function () { paused = true; }, { passive: true });
-        rc.addEventListener('touchend', function () { setTimeout(function () { paused = false; }, 1500); }, { passive: true });
-        function tick() {
-          if (!paused && !isDown) {
-            rc.scrollLeft += speed;
-            if (rc.scrollLeft >= rc.scrollWidth - rc.clientWidth - 1) rc.scrollLeft = 0;
-          }
-          requestAnimationFrame(tick);
-        }
-        requestAnimationFrame(tick);
-      })();
-    </script>
 
-    <!-- ══════════════════════════ CTA ESSAI ══════════════════════════ -->
     <section id="contact" class="py-12 md:py-24 s-dark relative overflow-hidden">
       <div class="contact-overlay">
       </div>
@@ -1935,7 +1798,6 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════ FOOTER ══════════════════════════ -->
   </main>
   <footer class="py-12 s-darker border-t border-white-8">
     <div class="max-w-6xl mx-auto px-5">

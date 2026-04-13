@@ -1,1 +1,106 @@
-document.addEventListener("DOMContentLoaded", () => { lucide.createIcons() }), document.getElementById("menu-btn").addEventListener("click", () => { document.getElementById("mobile-menu").classList.toggle("hidden") }), document.querySelectorAll('a[href^="#"]').forEach(e => { e.addEventListener("click", () => document.getElementById("mobile-menu").classList.add("hidden")) }); const obs = new IntersectionObserver(e => { e.forEach(e => { e.isIntersecting && (e.target.classList.add("in"), obs.unobserve(e.target)) }) }, { threshold: .08, rootMargin: "0px 0px -20px 0px" }); function toggleFaq(e) { let t = e.classList.contains("open"); document.querySelectorAll(".faq-item").forEach(e => e.classList.remove("open")), t || e.classList.add("open"), lucide.createIcons() } document.querySelectorAll(".reveal").forEach(e => obs.observe(e)), window.addEventListener("scroll", () => { let e = document.getElementById("nav"); e && (e.style.boxShadow = window.scrollY > 10 ? "0 2px 20px rgba(0,0,0,.35)" : "none") }); const signupForm = document.getElementById("signup-form"); signupForm && signupForm.addEventListener("submit", function (e) { e.preventDefault(); let t = document.getElementById("prenom").value.trim(), s = document.getElementById("email").value.trim(), l = document.getElementById("form-msg"); if (!t || !s) { l.textContent = "Veuillez renseigner votre pr\xe9nom et votre email.", l.className = "text-sm text-center", l.style.color = "#f87171", l.classList.remove("hidden"); return } if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s)) { l.textContent = "Veuillez entrer une adresse email valide.", l.className = "text-sm text-center", l.style.color = "#f87171", l.classList.remove("hidden"); return } document.getElementById("btn-text").textContent = "Compte cr\xe9\xe9 !", document.getElementById("btn-icon").classList.add("hidden"), document.getElementById("btn-check").classList.remove("hidden"), l.textContent = "Bienvenue " + t + " ! V\xe9rifiez votre bo\xeete mail pour activer votre compte.", l.style.color = "#c5d97d", l.className = "text-sm text-center", l.classList.remove("hidden"), this.querySelectorAll("input,select,button").forEach(e => e.disabled = !0), lucide.createIcons() }); const carousel = document.getElementById("race-carousel"); if (carousel) { let e = !1, t, s; carousel.addEventListener("mousedown", l => { e = !0, carousel.style.scrollBehavior = "auto", carousel.style.scrollSnapType = "none", carousel.classList.add("active"), t = l.pageX - carousel.offsetLeft, s = carousel.scrollLeft }), carousel.addEventListener("mouseleave", () => { e && (e = !1, carousel.style.scrollSnapType = "x mandatory", carousel.style.scrollBehavior = "smooth") }), carousel.addEventListener("mouseup", () => { e = !1, carousel.style.scrollSnapType = "x mandatory", carousel.style.scrollBehavior = "smooth" }), carousel.addEventListener("mousemove", l => { if (!e) return; l.preventDefault(); let o = l.pageX - carousel.offsetLeft, r = (o - t) * 1.5; carousel.scrollLeft = s - r }) } window.showModule = function (e) { document.querySelectorAll(".module-tab").forEach(e => { e.classList.remove("active"), e.style.borderColor = "", e.style.backgroundColor = ""; let t = e.querySelector("i[data-lucide]"); t && (t.style.color = "") }); let t = document.getElementById("btn-" + e); if (t) { let s = { inscriptions: "#c4d87d", benevoles: "#6f6fad", communication: "#1e929b", administratif: "#30b7c0" }[e]; t.classList.add("active"), t.classList.remove("border-gray-100", "bg-white"), t.style.borderColor = s, t.style.backgroundColor = s + "10"; let l = t.querySelector("i[data-lucide]"); l && (l.style.color = s) } document.querySelectorAll(".module-content").forEach(e => { e.classList.add("hidden"), e.classList.remove("active") }); let o = document.getElementById("mod-" + e); o && (o.classList.remove("hidden"), o.classList.add("active", "animate-in", "fade-in", "slide-in-from-bottom-4", "duration-500")), lucide.createIcons() };
+// ==========================================
+// 1. GESTION DES ACCORDÉONS (Desktop & FAQ)
+// ==========================================
+function toggleAccordion(btn) {
+    const item = btn.closest('.accordion-item');
+    const content = item.querySelector('.accordion-content');
+    const isOpen = item.classList.contains('open');
+
+    // Ferme les autres accordéons ouverts
+    document.querySelectorAll('.accordion-item.open').forEach(el => {
+        el.classList.remove('open');
+        if (el.querySelector('.accordion-content')) {
+            el.querySelector('.accordion-content').classList.remove('open');
+        }
+    });
+
+    // Ouvre celui cliqué
+    if (!isOpen) {
+        item.classList.add('open');
+        content.classList.add('open');
+    }
+}
+
+function toggleFaq(btn) {
+    const content = btn.querySelector('.faq-answer') || btn.nextElementSibling;
+    const icon = btn.querySelector('.faq-icon');
+
+    if (content.style.display === 'block') {
+        content.style.display = 'none';
+        if (icon) icon.style.transform = 'rotate(0deg)';
+    } else {
+        content.style.display = 'block';
+        if (icon) icon.style.transform = 'rotate(45deg)';
+    }
+}
+
+// ==========================================
+// 2. GESTION DES MENUS MOBILES
+// ==========================================
+function toggleMobAccordion(id, btn) {
+    var body = document.getElementById(id);
+    var chevron = btn.querySelector('[data-lucide="chevron-down"]');
+    if (body.classList.contains('hidden')) {
+        body.classList.remove('hidden');
+        if (chevron) chevron.style.transform = 'rotate(180deg)';
+    } else {
+        body.classList.add('hidden');
+        if (chevron) chevron.style.transform = '';
+    }
+    // Rafraîchir les icônes Lucide si nécessaire
+    if (window.lucide) lucide.createIcons();
+}
+
+// ==========================================
+// 3. CARROUSEL DES AVIS / LOGOS
+// ==========================================
+document.addEventListener('DOMContentLoaded', function () {
+    var rc = document.getElementById('reviews-carousel') || document.getElementById('race-carousel');
+    if (!rc) return;
+
+    var isDown = false, startX, scrollLeft, paused = false, speed = 0.6;
+
+    rc.addEventListener('mousedown', function (e) {
+        isDown = true; paused = true;
+        rc.style.scrollBehavior = 'auto';
+        rc.style.scrollSnapType = 'none';
+        rc.classList.add('active');
+        startX = e.pageX - rc.offsetLeft;
+        scrollLeft = rc.scrollLeft;
+    });
+
+    rc.addEventListener('mouseleave', function () {
+        if (isDown) {
+            isDown = false;
+            rc.style.scrollSnapType = 'x mandatory';
+            rc.style.scrollBehavior = 'smooth';
+        }
+        paused = false;
+    });
+
+    rc.addEventListener('mouseup', function () {
+        isDown = false;
+        rc.style.scrollSnapType = 'x mandatory';
+        rc.style.scrollBehavior = 'smooth';
+        setTimeout(function () { paused = false; }, 1200);
+    });
+
+    rc.addEventListener('mousemove', function (e) {
+        if (!isDown) return;
+        e.preventDefault();
+        rc.scrollLeft = scrollLeft - (e.pageX - rc.offsetLeft - startX);
+    });
+
+    rc.addEventListener('mouseenter', function () { if (!isDown) paused = true; });
+    rc.addEventListener('touchstart', function () { paused = true; }, { passive: true });
+    rc.addEventListener('touchend', function () { setTimeout(function () { paused = false; }, 1500); }, { passive: true });
+
+    function tick() {
+        if (!paused && !isDown) {
+            rc.scrollLeft += speed;
+            if (rc.scrollLeft >= rc.scrollWidth - rc.clientWidth - 1) rc.scrollLeft = 0;
+        }
+        requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+});
