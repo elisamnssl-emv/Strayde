@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Strayde - Serveur local (dist)",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8080", "--directory", "dist"],
+      "port": 8080
+    },
+    {
+      "name": "Strayde - Build Python",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["build.py"],
+      "port": null
+    }
+  ]
+}
