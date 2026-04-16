@@ -96,7 +96,7 @@ body {
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, .72);
+  color: rgba(255, 255, 255, 1);
   font-size: .875rem;
   transition: color .18s
 }
@@ -380,11 +380,11 @@ body {
 }
 
 .text-white-65 {
-  color: rgba(255, 255, 255, .65)
+  color: rgba(255, 255, 255, 1)
 }
 
 .text-white-75 {
-  color: rgba(255, 255, 255, .75)
+  color: rgba(255, 255, 255, 1)
 }
 
 .text-muted {
